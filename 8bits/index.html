@@ -13,15 +13,43 @@
 
 <body class="bg-black text-white">
 
-  <!-- HEADER -->
-  <header class="w-full p-6 flex justify-between items-center border-b border-white/20">
-    <h1 class="text-3xl font-bold tracking-wide">Reversiones 80s</h1>
-    <nav>
-      <ul class="flex gap-6 text-lg">
-        <li><a href="../home/index.html" class="hover:underline">Home</a></li>
-      </ul>
-    </nav>
-  </header>
+<header class="w-full p-6 flex justify-between items-center border-b border-white/20 relative">
+
+  <a href="../home/index.html">
+    <h1 class="text-3xl font-bold tracking-wide">80s</h1>
+  </a>
+
+  <!-- NAV DESKTOP -->
+  <nav class="hidden md:flex">
+    <ul class="flex gap-6 text-lg">
+      <li><a href="../home/index.html" class="hover:underline">Home</a></li>
+      <li><a href="../galeria/index.html" class="hover:underline">Galería</a></li>
+      <li><a href="../discografia/index.html" class="hover:underline">Discografía</a></li>
+      <li><a href="../estetica/index.html" class="hover:underline">Estética</a></li>
+      <li><a href="../publicidad/index.html" class="hover:underline">Publicidad</a></li>
+      <li><a href="../top10/index.html" class="hover:underline">Top 10</a></li>
+      <li><a href="../8bits/index.html" class="hover:underline">8 Bits</a></li>
+    </ul>
+  </nav>
+
+  <!-- NAV MOBILE -->
+  <button id="navToggle" class="md:hidden text-3xl select-none">☰</button>
+
+  <nav id="navMenu"
+       class="hidden absolute top-full right-0 bg-black/90 border border-white/20
+              rounded-xl p-4 flex-col gap-4 text-lg md:hidden w-40 backdrop-blur-md">
+    <a href="../home/index.html" class="block hover:underline">Home</a>
+    <a href="../galeria/index.html" class="block hover:underline">Galería</a>
+    <a href="../discografia/index.html" class="block hover:underline">Discografía</a>
+    <a href="../estetica/index.html" class="block hover:underline">Estética</a>
+    <a href="../publicidad/index.html" class="block hover:underline">Publicidad</a>
+    <a href="../top10/index.html" class="block hover:underline">Top 10</a>
+    <a href="../8bits/index.html" class="block hover:underline">8 Bits</a>
+  </nav>
+
+</header>
+
+
 
   <!-- MAIN -->
   <main class="max-w-4xl mx-auto p-10 space-y-10">
@@ -29,8 +57,10 @@
     <section>
       <h2 class="text-4xl font-bold mb-4">Museo de sonidos 8-bit</h2>
       <p class="opacity-80">
-        Explorá una pequeña galería interactiva con sonidos clásicos de consolas
-        como la NES, Game Boy y Atari. Hacé click en cada tarjeta para activar su sonido.
+        A quién no se le cae un lagrimón y se estalla de recuerdos al escuchar estos sonidos 
+        tan característicos de los videojuegos de los años 80. En esta sección te invitamos
+        a revivir esos momentos. Hacé clic en cada botón para escuchar y transportarte a la
+        nostalgia de los videojuegos clásicos.
       </p>
     </section>
 
@@ -38,7 +68,27 @@
     <section id="soundGrid" class="grid sm:grid-cols-2 gap-6">
       <!-- Se llena por JS -->
     </section>
+<!-- JUEGO 8-BIT -->
+<section class="mt-16 p-8 rounded-2xl neon-box">
+  <h2 class="text-3xl font-bold mb-4">Mini-juego 8-bit</h2>
 
+  <p class="opacity-80 mb-6">
+    Te presentamos un pequeño juego inspirado en la estética de los videojuegos
+    de 8 bits de los años 80, donde podés controlar una nave y eliminar invasores pixelados.
+    Pensado como homenaje a clásicos como Space Invaders y Galaga.
+  </p>
+
+<img
+  src="./game/img/juego.jpg"
+  alt="Juego 8-bit"
+  class="w-full rounded-xl mb-6 shadow-lg"
+/>
+
+  <a href="./game/juego.html" target="_blank" class="inline-block bg-purple-600 hover:bg-purple-700 text-white py-3 px-6 rounded-xl text-lg font-bold transition">
+
+    🎮 JUGAR AHORA
+  </a>
+</section>
   </main>
 
   <!-- FOOTER -->

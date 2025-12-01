@@ -224,3 +224,29 @@ footer {
   object-fit: cover;
   border-radius: 0.75rem;
 }
+
+/* ----------------------
+   juego 
+----------------------- */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.overlay.active {
+  display: flex;
+}
+
+.box {
+  background: #111;
+  padding: 30px 40px;
+  border: 2px solid #00ffff;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+}
