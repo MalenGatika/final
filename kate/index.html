@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reversiones 80s – Canción</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CSS Global -->
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <!-- JS Global + Página -->
+  <script defer src="../home/js/main.js"></script>
+  <script defer src="../kate/js/songs.js"></script>
+</head>
+
+<body class="bg-black text-white font-sans">
+
+  <!-- HEADER -->
+  <header class="w-full p-6 flex justify-between items-center border-b border-white/20">
+    <h1 class="text-3xl font-bold tracking-wide">80s</h1>
+    <nav>
+      <ul class="flex gap-6 text-lg">
+        <li><a href="../home/index.html" class="hover:underline">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- TÍTULO PRINCIPAL -->
+    <section class="relative w-full h-[70vh] bg-cover bg-center flex items-end"
+    style="background-image: url('https://media.gettyimages.com/id/88431075/es/foto/kate-bush-performs-on-stage-on-the-tour-of-life-carre-amsterdam-netherlands-29th-april-1979.jpg?s=1024x1024&w=gi&k=20&c=oDqzfLux88DFf5UOToWbiKRPdiiAQSwmTUSNqkZFM6E=');">
+    <div class="w-full p-10 bg-black/50 backdrop-blur-sm">
+      <h2 class="text-5xl font-bold neon-text">Kate Bush</h2>
+      <p class="opacity-90 text-lg">Una de las voces más icónicas de los 80, símbolo de libertad estética,
+      energía punk-pop y empoderamiento femenino.</p>
+    </div>
+  </section>
+
+  <!-- CONTENEDOR PRINCIPAL -->
+  <main class="p-10 max-w-4xl mx-auto space-y-10">
+
+     <!-- INFO DE LA CANCIÓN / ARTISTA -->
+<section class="neon-box p-6 rounded-xl my-10 max-w-3xl mx-auto">
+  <h2 class="text-3xl font-bold mb-4 neon-title">Sobre la canción y sus reversiones</h2>
+
+  <p class="text-gray-200 leading-relaxed mb-4">
+    <span class="font-semibold">“Running Up That Hill”</span>, lanzada en 1985 como parte del
+    álbum <em>Hounds of Love</em>, es una de las obras más reconocidas de
+    <span class="font-semibold">Kate Bush</span>. Su letra explora el deseo de intercambiar lugares
+    con otra persona para comprenderla en profundidad, un tema emocionalmente
+    poderoso que marcó a toda una generación.
+  </p>
+
+  <p class="text-gray-200 leading-relaxed mb-4">
+    Con el paso del tiempo, la canción fue reinterpretada por artistas de distintos
+    estilos: desde lecturas electrónicas atmosféricas hasta versiones acústicas
+    íntimas. Cada nuevo enfoque modifica la energía, la textura y la emoción del
+    tema, revelando cómo una misma melodía puede expandirse en direcciones inesperadas.
+  </p>
+
+  <p class="text-gray-200 leading-relaxed">
+    En esta página vas a poder escuchar <span class="font-semibold">cuatro universos sonoros</span>
+    que nacen de la misma obra. Explorá cómo cambia su identidad según quién la
+    interpreta y cómo te atraviesa cada una de sus versiones.
+  </p>
+</section>
+    <section>
+<h2 id="songTitle" class="text-4xl font-bold mb-2">
+  Running up the hill
+</h2>
+      <p id="songArtist" class="text-xl opacity-80">Artista Original</p>
+    </section>
+
+    <!-- REPRODUCTOR PRINCIPAL -->
+    <section class="bg-white/5 p-6 rounded-2xl border border-white/10 space-y-4 player-neon neon-box">
+      <h3 class="text-2xl font-semibold">Versión seleccionada</h3>
+
+      <!-- AUDIO -->
+      <audio id="mainPlayer" controls class="w-full"></audio>
+
+      <!-- VISUALIZADOR DE AUDIO -->
+      <canvas id="audio-visualizer" class="w-full h-40 mt-4 visualizer-border"></canvas>
+
+      <!-- SELECTOR DE VERSIONES -->
+      <div class="flex gap-4 mt-4">
+        <button data-version="0" class="versionBtn btn-primary">Original</button>
+        <button data-version="1" class="versionBtn btn-primary">Cover 1</button>
+        <button data-version="2" class="versionBtn btn-primary">Cover 2</button>
+        <button data-version="3" class="versionBtn btn-primary">Cover 3</button>
+      </div>
+    </section>
+
+    <!-- MINI JUEGO -->
+    <section class="bg-white/5 p-6 rounded-2xl border border-white/10 space-y-4">
+      <h3 class="text-2xl font-semibold">Mini juego: Adiviná la versión</h3>
+      <p class="opacity-80">Escuchá un fragmento y elegí cuál versión es.</p>
+
+      <audio id="gamePlayer" controls class="w-full"></audio>
+
+      <div id="gameOptions" class="grid grid-cols-2 gap-4 pt-4"></div>
+
+      <p id="gameResult" class="text-xl font-semibold pt-4"></p>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="text-center p-6 opacity-70 text-sm border-t border-white/20">
+    Proyecto para Informática 1 – Artes Multimediales
+  </footer>
+
+</body>
+</html>

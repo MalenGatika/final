@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Michael Jackson – Reversiones 80s</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script defer src="./js/michael.js"></script>
+</head>
+
+<body class="bg-black text-white font-sans">
+
+  <!-- HEADER -->
+  <header class="w-full p-6 flex justify-between items-center border-b border-white/20 relative">
+    <h1 class="text-3xl font-bold tracking-wide">80s</h1>
+    <nav class="hidden md:flex">
+      <ul class="flex gap-6 text-lg">
+        <li><a href="../home/index.html" class="hover:underline">Home</a></li>
+        <li><a href="#bio" class="hover:underline">Biografía</a></li>
+        <li><a href="#player" class="hover:underline">Canciones</a></li>
+        <li><a href="#press" class="hover:underline">Prensa</a></li>
+      </ul>
+    </nav>
+    <button id="navToggle" class="md:hidden text-3xl select-none">☰</button>
+    <nav id="navMenu"
+      class="hidden absolute top-full right-0 bg-black/90 border border-white/20 rounded-xl p-4 flex-col gap-4 text-lg md:hidden w-40 backdrop-blur-md">
+      <a href="../home/index.html" class="block hover:underline">Home</a>
+      <a href="#bio" class="block hover:underline">Biografía</a>
+      <a href="#player" class="block hover:underline">Canciones</a>
+      <a href="#press" class="block hover:underline">Prensa</a>
+    </nav>
+  </header>
+
+  <!-- TÍTULO PRINCIPAL -->
+  <section class="p-10 text-center">
+    <div class="title-strip">
+      <h2 class="neon-box text-4xl font-bold">Michael Jackson</h2>
+    </div>
+    <p class="strip-bg opacity-100 max-w-3xl mx-auto mt-6">
+      El Rey del Pop, responsable de revolucionar la música, el baile y el espectáculo.
+    </p>
+  </section>
+<!-- BIOGRAFÍA -->
+<section id="bio" class="neon-box p-8 rounded-xl my-10 max-w-3xl mx-auto leading-relaxed">
+  <h3 class="text-3xl font-semibold mb-4 glitch" data-text="Biografía">Biografía</h3>
+  <p class="mb-4">
+    Michael Joseph Jackson nació el 29 de agosto de 1958 en Gary, Indiana. Comenzó su carrera a muy temprana edad
+    junto con sus hermanos en The Jackson 5, destacándose por su talento para el canto, la danza y el espectáculo. 
+    Su estilo único y su voz distintiva lo convirtieron en un ícono mundial desde su adolescencia.
+  </p>
+  <p class="mb-4">
+    En la década de 1980, Jackson alcanzó la cima de su carrera como solista con álbumes legendarios como 
+    <em>Thriller</em> (1982), <em>Bad</em> (1987) y <em>Dangerous</em> (1991), mezclando pop, funk y rock con
+    innovaciones en videoclips, coreografía y producción musical. Su famoso "moonwalk" y su presencia escénica
+    revolucionaron los espectáculos en vivo y marcaron un antes y un después en la industria musical.
+  </p>
+ 
+  <p class="mb-4">
+    Su impacto en la música, la danza y la cultura pop es innegable. Su creatividad, 
+    innovaciones tecnológicas en videoclips, coreografía y estilo personal han inspirado a artistas de todo el mundo.
+  </p>
+  <p>
+    Michael Jackson falleció el 25 de junio de 2009. Su música, sus videos, su estilo y su influencia continúan
+    siendo estudiados, homenajeados y celebrados, dejando un legado complejo que mezcla genio artístico y controversia.
+  </p>
+</section>
+
+
+ <!-- VIDEOS / VERSIONES (Opción B: 4 por fila, imágenes más altas) -->
+<section id="player" class="my-14 max-w-5xl mx-auto text-center">
+  <h3 class="text-3xl font-semibold mb-6 neon-title">Versiones: Smooth Criminal</h3>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 p-4">
+
+    <a href="https://www.youtube.com/watch?v=h_D3VFfhvs4" target="_blank"
+       class="bg-white/10 p-4 rounded-xl shadow-lg hover:scale-105 transition block">
+      <img src="https://img.youtube.com/vi/h_D3VFfhvs4/hqdefault.jpg"
+           alt="Michael Jackson - Smooth Criminal"
+           class="rounded-lg w-full object-cover mb-3 h-64 sm:h-72 lg:h-80">
+      <p class="font-semibold text-lg">Original</p>
+      <p class="opacity-70 text-sm">Michael Jackson</p>
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=CDl9ZMfj6aE" target="_blank"
+       class="bg-white/10 p-4 rounded-xl shadow-lg hover:scale-105 transition block">
+      <img src="https://img.youtube.com/vi/CDl9ZMfj6aE/hqdefault.jpg"
+           alt="Alien Ant Farm Cover"
+           class="rounded-lg w-full object-cover mb-3 h-64 sm:h-72 lg:h-80">
+      <p class="font-semibold text-lg">Cover – Alien Ant Farm</p>
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=0HsTVAcbupo" target="_blank"
+       class="bg-white/10 p-4 rounded-xl shadow-lg hover:scale-105 transition block">
+      <img src="https://img.youtube.com/vi/0HsTVAcbupo/hqdefault.jpg"
+           alt="Glee Cast Cover"
+           class="rounded-lg w-full object-cover mb-3 h-64 sm:h-72 lg:h-80">
+      <p class="font-semibold text-lg">Cover – Glee Cast</p>
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=uT3SBzmDxGk" target="_blank"
+       class="bg-white/10 p-4 rounded-xl shadow-lg hover:scale-105 transition block">
+      <img src="https://img.youtube.com/vi/uT3SBzmDxGk/hqdefault.jpg"
+           alt="2CELLOS Cover"
+           class="rounded-lg w-full object-cover mb-3 h-64 sm:h-72 lg:h-80">
+      <p class="font-semibold text-lg">Cover – 2CELLOS</p>
+    </a>
+
+  </div>
+</section>
+
+  <!-- PRENSA / PORTADAS DE REVISTA -->
+  <section id="press" class="max-w-6xl mx-auto p-10 mt-16">
+    <h3 class="text-3xl font-semibold mb-8 text-center">Portadas históricas</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Portada Right On! -->
+      <div class="neon-box p-4 rounded-xl hover:scale-105 transition">
+        <img src="https://cdn-p.smehost.net/sites/28d35d54a3c64e2b851790a18a1c4c18/wp-content/uploads/2016/03/Jan7.png"
+             alt="Michael Jackson en portada de Right On! (1983)"
+             class="rounded-lg w-full mb-3 object-cover">
+        <p class="text-center opacity-80 text-sm">Right On! – Diciembre 1983</p>
+      </div>
+
+      <!-- Portada Newsweek -->
+      <div class="neon-box p-4 rounded-xl hover:scale-105 transition">
+        <img src="https://cdn-p.smehost.net/sites/28d35d54a3c64e2b851790a18a1c4c18/wp-content/uploads/2020/01/20Jan29_RightOn_900px.jpg"
+             alt="Michael Jackson en portada de Newsweek (1984)"
+             class="rounded-lg w-full mb-3 object-cover">
+        <p class="text-center opacity-80 text-sm">Newsweek –</p>
+      </div>
+
+      <!-- Portada Rolling Stone (ilustrada) -->
+      <div class="neon-box p-4 rounded-xl hover:scale-105 transition">
+        <img src="https://preview.redd.it/in-the-80s-michaels-face-was-on-the-cover-of-literally-v0-ubo9av5ag2cf1.jpg?width=640&crop=smart&auto=webp&s=c4d533dde776d96b24818ea4b32511d31a7c5841"
+             alt="Michael Jackson ilustración Rolling Stone"
+             class="rounded-lg w-full mb-3 object-cover">
+        <p class="text-center opacity-80 text-sm">Rolling Stone – 1987 </p>
+      </div>
+
+    </div>
+  </section>
+ <!-- LÍNEA DE TIEMPO DESTACADA -->
+<section class="max-w-3xl mx-auto p-10 mt-16">
+  <h3 class="text-3xl font-semibold mb-8 text-center">Línea de tiempo musical</h3>
+  <div class="space-y-6 border-l-2 border-white/20 pl-6">
+
+    <!-- Jackson 5 -->
+    <div>
+      <h4 class="text-xl font-bold">1964 – Comienzos con Jackson 5</h4>
+      <p class="opacity-70 text-sm">Michael inicia su carrera junto a sus hermanos, mostrando talento excepcional desde niño.</p>
+    </div>
+
+    <div>
+      <h4 class="text-xl font-bold">1969 – Primer éxito “I Want You Back”</h4>
+      <p class="opacity-70 text-sm">El sencillo alcanza el número 1 en Billboard, catapultando la fama de Michael y los Jackson 5.</p>
+    </div>
+
+    <!-- Carrera solista temprana -->
+    <div>
+      <h4 class="text-xl font-bold">1971 – Primer álbum solista</h4>
+      <p class="opacity-70 text-sm">Lanza <em>Got to Be There</em>, demostrando versatilidad y talento independiente.</p>
+    </div>
+
+    <div>
+      <h4 class="text-xl font-bold">1979 – Off the Wall</h4>
+      <p class="opacity-70 text-sm">Álbum que consolida a Michael como estrella mundial, con éxitos como “Don’t Stop ‘Til You Get Enough”.</p>
+    </div>
+
+    <div>
+      <h4 class="text-xl font-bold">1982 – Thriller</h4>
+      <p class="opacity-70 text-sm">Lanzamiento del álbum más vendido de la historia, con videoclips innovadores y coreografía icónica.</p>
+    </div>
+
+    <div>
+      <h4 class="text-xl font-bold">1983 – Moonwalk</h4>
+      <p class="opacity-70 text-sm">Debuta el legendario “moonwalk” en la gala Motown 25, dejando huella en la historia de la danza.</p>
+    </div>
+
+    <div>
+      <h4 class="text-xl font-bold">1987 – Bad</h4>
+      <p class="opacity-70 text-sm">Lanza el álbum <em>Bad</em> y realiza la gira homónima, consolidando su estatus de superestrella global.</p>
+    </div>
+
+    <div>
+      <h4 class="text-xl font-bold">1988 – Smooth Criminal</h4>
+      <p class="opacity-70 text-sm">El videoclip introduce el icónico “lean” antigravitatorio, revolucionando sus presentaciones en vivo.</p>
+    </div>
+
+    <div>
+      <h4 class="text-xl font-bold">1991 – Dangerous</h4>
+      <p class="opacity-70 text-sm">Álbum que mezcla pop, rock y R&B, con giras innovadoras y éxitos como “Black or White”.</p>
+    </div>
+
+    <div>
+      <h4 class="text-xl font-bold">1995 – HIStory</h4>
+      <p class="opacity-70 text-sm">Lanza álbum doble con grandes éxitos y nuevas canciones, explorando sonidos más maduros.</p>
+    </div>
+
+    <div>
+      <h4 class="text-xl font-bold">2001 – Invincible</h4>
+      <p class="opacity-70 text-sm">Último álbum de estudio lanzado en vida, con producción sofisticada y colaboraciones destacadas.</p>
+    </div>
+
+    <div>
+      <h4 class="text-xl font-bold">2009 – Fallecimiento</h4>
+      <p class="opacity-70 text-sm">Michael Jackson muere dejando un legado musical y cultural que sigue inspirando a artistas de todo el mundo.</p>
+    </div>
+
+  </div>
+</section>
+
+
+ <!-- DISCOS DESTACADOS -->
+<section class="max-w-6xl mx-auto p-10 mt-16">
+  <h3 class="text-3xl font-semibold mb-8 text-center">Portadas de álbumes</h3>
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+
+    <img class="neon-box album-cover hover:scale-105 transition"
+         src="https://lacortedelreydelpop.com/wp-content/uploads/2023/06/coverthriller5.png"
+         alt="Portada Thriller">
+
+    <img class="neon-box album-cover hover:scale-105 transition"
+         src="https://preview.redd.it/ybudrzdpjfx41.jpg?width=640&crop=smart&auto=webp&s=10eec790c633a29470e741dc3b74ff26ebeb3d06"
+         alt="Portada Bad">
+
+    <img class="neon-box album-cover hover:scale-105 transition"
+         src="https://images.cdn1.buscalibre.com/fit-in/520x520/1f/f9/64641ea9ec617d924da211d77ba68469.jpg"
+         alt="Portada HIStory">
+
+    <img class="neon-box album-cover hover:scale-105 transition"
+         src="https://cdn.themedizine.com/2021/04/dangerous-portada-the-medizine-michael-jackson-1200x771.jpg"
+         alt="Portada Dangerous">
+
+    <img class="neon-box album-cover hover:scale-105 transition"
+         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQuzm3nHBmxXuTDTjGwVhPuS7Sdf6Mf2I7Aw&s"
+         alt="Portada Off The Wall">
+
+  </div>
+</section>
+
+
+  <footer class="text-center p-6 opacity-70 text-sm border-t border-white/20">
+    Proyecto para Informática 1 – Artes Multimediales
+  </footer>
+</body>
+</html>

@@ -1,0 +1,226 @@
+/* Tailwind base import */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom global styles */
+body {
+  @apply 
+}
+
+header, footer {
+  @apply w-full text-center;
+}
+
+nav a {
+  @apply hover:text-white transition-colors duration-200;
+}
+
+/* Home page styling */
+
+.song-card:hover {
+  @apply scale-105 shadow-2xl;
+}
+
+/* Buttons */
+.btn-primary {
+  @apply px-4 py-2 rounded-lg font-semibold bg-indigo-600 hover:bg-indigo-700 transition;
+}
+
+/* Footer */
+footer {
+  @apply text-gray-400;
+}
+
+/* ----------------------------------------
+   TITULOS NEON
+---------------------------------------- */
+.neon-title {
+  text-shadow:
+    0 0 8px #ff00c8,
+    0 0 15px #ff00c8,
+    0 0 25px rgba(255, 0, 200, 0.7);
+}
+
+/* ----------------------------------------
+   MARCO NEÓN ANIMADO (para tarjetas/secciones)
+---------------------------------------- */
+.neon-box {
+  position: relative;
+  border: 2px solid rgba(255, 0, 200, 0.4);
+  box-shadow: 0 0 20px rgba(255, 0, 200, 0.3);
+  overflow: hidden;
+}
+
+.neon-box::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  border: 2px solid #ff00c8;
+  filter: blur(8px);
+  opacity: 0.4;
+  animation: neonmove 3.5s linear infinite;
+}
+
+@keyframes neonmove {
+  0% { transform: translateX(-10%) translateY(-10%); }
+  50% { transform: translateX(10%) translateY(10%); }
+  100% { transform: translateX(-10%) translateY(-10%); }
+}
+
+/* ----------------------------------------
+   EFECTO GLITCH SUAVE (textos)
+---------------------------------------- */
+.glitch {
+  position: relative;
+  display: inline-block;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.6;
+}
+
+.glitch::before {
+  color: cyan;
+  transform: translate(2px, -1px);
+}
+
+.glitch::after {
+  color: magenta;
+  transform: translate(-2px, 1px);
+}
+
+.glitch:hover::before,
+.glitch:hover::after {
+  animation: glitch-move 0.3s infinite;
+}
+
+@keyframes glitch-move {
+  0% { transform: translate(1px, -1px); }
+  50% { transform: translate(-1px, 1px); }
+  100% { transform: translate(1px, -1px); }
+}
+
+/* ----------------------------------------
+   REPRODUCTOR NEÓN (envoltorio)
+---------------------------------------- */
+.player-neon {
+  border-radius: 14px;
+  border: 1px solid rgba(255, 0, 200, 0.4);
+  box-shadow:
+    0 0 10px rgba(255, 0, 200, 0.4),
+    0 0 30px rgba(255, 0, 200, 0.2);
+  padding: 1rem;
+}
+
+/* ----------------------------------------
+   VISUALIZADOR NEÓN (ya complementa el JS)
+---------------------------------------- */
+.visualizer-border {
+  border: 2px solid rgba(0, 255, 255, 0.2);
+  box-shadow:
+    0 0 10px rgba(0, 255, 255, 0.5),
+    inset 0 0 20px rgba(0, 255, 255, 0.2);
+  border-radius: 8px;
+}
+
+/* ----------------------------------------
+   BOTONES NEÓN (extra)
+---------------------------------------- */
+.neon-btn {
+  box-shadow: 0 0 8px #ff00c8;
+  transition: 0.25s;
+}
+
+.neon-btn:hover {
+  box-shadow:
+    0 0 15px #ff00c8,
+    0 0 30px rgba(255,0,200, 0.7);
+  transform: scale(1.05);
+}
+
+/* ----------------------
+   LÍNEA DE TIEMPO
+----------------------- */
+.timeline {
+  display: flex;
+  overflow-x: auto;
+  gap: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.timeline-card {
+  min-width: 200px;
+  background: rgba(255, 0, 200, 0.2);
+  border: 2px solid rgba(255, 0, 200, 0.5);
+  border-radius: 1rem;
+  padding: 1rem;
+  flex-shrink: 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.timeline-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 0, 200, 0.7);
+}
+
+/* ----------------------
+   GALERÍA: cyndi
+----------------------- */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  font-size: 0.9rem;
+  max-width: 180px;
+  text-align: center;
+}
+
+.gallery-item:hover .tooltip {
+  opacity: 1;
+}
+
+/* ----------------------
+   michael
+----------------------- */
+.title-strip {
+  background-image: url("../michael/img/mj-strip.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 40px 0;      /* alto de la franja */
+  text-shadow: 0 0 10px rgba(0,0,0,0.8);
+  color: white;
+  border-radius: 12px;
+}
+.title-strip {
+  box-shadow: 0 0 15px 6px rgba(255,255,255,0.15);
+}
+
+.album-cover {
+  width: 100%;
+  height: 220px; /* podés subirlo si querés miniaturas más grandes */
+  object-fit: cover;
+  border-radius: 0.75rem;
+}

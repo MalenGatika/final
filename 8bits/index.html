@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Museo de Sonidos 8-bit</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <script defer src="./js/sounds.js"></script>
+</head>
+
+<body class="bg-black text-white">
+
+  <!-- HEADER -->
+  <header class="w-full p-6 flex justify-between items-center border-b border-white/20">
+    <h1 class="text-3xl font-bold tracking-wide">Reversiones 80s</h1>
+    <nav>
+      <ul class="flex gap-6 text-lg">
+        <li><a href="../home/index.html" class="hover:underline">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main class="max-w-4xl mx-auto p-10 space-y-10">
+
+    <section>
+      <h2 class="text-4xl font-bold mb-4">Museo de sonidos 8-bit</h2>
+      <p class="opacity-80">
+        Explorá una pequeña galería interactiva con sonidos clásicos de consolas
+        como la NES, Game Boy y Atari. Hacé click en cada tarjeta para activar su sonido.
+      </p>
+    </section>
+
+    <!-- Gallery -->
+    <section id="soundGrid" class="grid sm:grid-cols-2 gap-6">
+      <!-- Se llena por JS -->
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="text-center p-6 opacity-70 text-sm border-t border-white/20">
+    Proyecto para Informática 1 – Artes Multimediales
+  </footer>
+
+</body>
+</html>

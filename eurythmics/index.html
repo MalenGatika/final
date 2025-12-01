@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eurythmics – Reversiones 80s</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script defer src="../home/js/main.js"></script>
+</head>
+
+<body class="bg-black text-white font-sans">
+
+  <!-- HEADER IGUAL AL HOME -->
+  <header class="w-full p-6 flex justify-between items-center border-b border-white/20 relative">
+
+    <!-- LOGO -->
+    <h1 class="text-3xl font-bold tracking-wide">80s</h1>
+
+    <!-- NAV DESKTOP -->
+    <nav class="hidden md:flex">
+      <ul class="flex gap-6 text-lg">
+        <li><a href="../home/index.html" class="hover:underline">Home</a></li>
+        <li><a href="#bio" class="hover:underline">Biografía</a></li>
+        <li><a href="#gallery" class="hover:underline">Galería</a></li>
+      </ul>
+    </nav>
+
+    <!-- BOTÓN HAMBURGUESA -->
+    <button id="navToggle" class="md:hidden text-3xl select-none">☰</button>
+
+    <!-- NAV MOBILE -->
+    <nav id="navMenu"
+      class="hidden absolute top-full right-0 bg-black/90 border border-white/20 rounded-xl p-4 
+             flex-col gap-4 text-lg md:hidden w-40 backdrop-blur-md">
+
+      <a href="../home/index.html" class="block hover:underline">Home</a>
+      <a href="#bio" class="block hover:underline">Biografía</a>
+      <a href="#gallery" class="block hover:underline">Galería</a>
+
+    </nav>
+
+  </header>
+
+  <!-- HERO -->
+  <section class="relative w-full h-[60vh] bg-cover bg-center flex items-end"
+    style="background-image: url('https://media.gettyimages.com/id/599356506/es/foto/annie-lennox-during-the-making-of-the-eurythmics-video-missionary-man.jpg?s=612x612&w=0&k=20&c=Aaih1LJJHOq22WVAmXqeQnsExg-EtRKVoDYlrma0a58=');">
+    <div class="w-full p-10 bg-black/50 backdrop-blur-sm">
+      <h2 class="text-5xl font-bold neon-text">Eurythmics</h2>
+      <p class="opacity-90 text-lg">Dúo británico icónico de los años 80, pionero en synth-pop y estética visual.</p>
+    </div>
+  </section>
+
+  <!-- BIOGRAFÍA -->
+  <section id="bio" class="max-w-4xl mx-auto p-10">
+    <div class="neon-box p-8 rounded-2xl">
+      <h3 class="text-3xl font-semibold mb-4">Biografía</h3>
+
+   <p class="leading-relaxed opacity-90 mb-4">
+  Eurythmics fue un dúo musical formado en Londres en 1980 por <strong>Annie Lennox</strong> y 
+  <strong>Dave Stewart</strong>. Ambos provenían de la banda The Tourists, y luego de su separación 
+  decidieron experimentar con sintetizadores, cajas de ritmo y estructuras pop que en ese momento 
+  eran innovadoras dentro de la música mainstream.
+</p>
+
+<p class="leading-relaxed opacity-90 mb-4">
+  Su sonido se caracterizó por una combinación poderosa entre la voz expresiva y camaleónica 
+  de Lennox y la producción vanguardista de Stewart, quien incorporaba elementos electrónicos, 
+  texturas sintéticas y un enfoque experimental en el estudio. Este estilo los convirtió en una 
+  de las propuestas más influyentes de la década del 80.
+</p>
+
+<p class="leading-relaxed opacity-90 mb-4">
+  En 1983 lanzaron <strong>Sweet Dreams (Are Made of This)</strong>, el álbum que los catapultó 
+  a la fama internacional. El tema que da nombre al disco se transformó en un himno global, 
+  impulsado por su icónico riff de sintetizador y la estética andrógina de Lennox, que marcó 
+  un antes y un después en la cultura visual de la época. A partir de allí publicaron una serie 
+  de discos exitosos como <em>Touch</em> (1983), <em>Be Yourself Tonight</em> (1985) y 
+  <em>Revenge</em> (1986).
+</p>
+
+<p class="leading-relaxed opacity-90">
+  A lo largo de su carrera, Eurythmics combinó música, imagen y concepto de una forma única, 
+  explorando temas como la identidad, la tecnología, las emociones humanas y la crítica social. 
+  Su impacto sigue vigente y su estética continúa siendo referencia en la cultura pop y el 
+  synth-pop contemporáneo.
+</p>
+
+    </div>
+  </section>
+  <section class="max-w-3xl mx-auto p-10">
+  <blockquote class="text-center italic opacity-80 neon-box p-6 rounded-xl">
+    “Eurythmics reinventó la relación entre tecnología y emoción humana, 
+    proponiendo un pop tan cerebral como visceral.”
+    <br>
+    <span class="mt-4 block text-sm opacity-60">— Revista Melody Maker, 1984</span>
+  </blockquote>
+</section>
+
+  <!-- GALERÍA DE 10 IMÁGENES -->
+  <section id="gallery" class="max-w-6xl mx-auto p-10">
+    <h3 class="text-3xl font-semibold mb-6 text-center">Galería de imágenes</h3>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+      <!-- REPETÍ 10 IMÁGENES — CAMBIÁ TODAS LAS URL -->
+      <img src="https://m.media-amazon.com/images/M/MV5BMDhjNGMzNzgtMzY2Yi00MmExLThkZDYtNjdjODgzMzdhODQ4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+           class="rounded-xl neon-box object-cover h-80 w-full">
+
+      <img src="https://upload.wikimedia.org/wikipedia/en/5/59/Eurythmics_-_Touch.png"
+           class="rounded-xl neon-box object-cover h-80 w-full">
+
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBJhiDEzk4p65Fckln0PSu_gxK5VI2UTE6MQ&s"
+           class="rounded-xl neon-box object-cover h-80 w-full">
+
+      <!-- AGREGÁ 7 MÁS IGUAL QUE ESTAS -->
+      <img src="https://http2.mlstatic.com/D_694935-MLA49992010326_052022-C.jpg"
+           class="rounded-xl neon-box object-cover h-80 w-full">
+
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzkNqymkutEFKZbXmaeYoPTJpreZbao8nhjg&s"
+           class="rounded-xl neon-box object-cover h-80 w-full">
+
+      <img src="https://i.discogs.com/H1BtgHymmrwJhwM3Fw9gyitufzIztxIZRUx5_1B8WP4/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTg2MTU1/OS0xNDI5NjQ3OTkw/LTgwMjAuanBlZw.jpeg"
+           class="rounded-xl neon-box object-cover h-80 w-full">
+
+      <img src="https://cdn-images.dzcdn.net/images/cover/5beedf6311d51b8b59d99a8ff5e229d6/1900x1900-000000-80-0-0.jpg"
+           class="rounded-xl neon-box object-cover h-80 w-full">
+
+      <img src="https://lagraminola.wordpress.com/wp-content/uploads/2017/07/1984.jpg?w=499&h=502"
+           class="rounded-xl neon-box object-cover h-80 w-full">
+
+      <img src="https://lagraminola.wordpress.com/wp-content/uploads/2017/07/eur-peace.jpg?w=503&h=503"
+           class="rounded-xl neon-box object-cover h-80 w-full">
+
+    </div>
+  </section>
+
+  <!-- VIDEOS DE YOUTUBE -->
+ <!-- VIDEOS DE YOUTUBE (CON IMÁGENES CLICKABLES) -->
+<section class="max-w-6xl mx-auto p-10">
+  <h3 class="text-3xl font-semibold mb-8 text-center">Videos destacados</h3>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+  <!-- VIDEO 1 -->
+<a href="https://www.youtube.com/watch?v=qeMFqkcPYcg" target="_blank"
+   class="block rounded-xl overflow-hidden neon-box hover:scale-105 transition">
+  <img src="https://img.youtube.com/vi/qeMFqkcPYcg/hqdefault.jpg"
+       class="w-full h-64 object-cover">
+</a>
+  <!-- VIDEO 2 -->
+<a href="https://www.youtube.com/watch?v=TzFnYcIqj6I" target="_blank"
+   class="block rounded-xl overflow-hidden neon-box hover:scale-105 transition">
+  <img src="https://img.youtube.com/vi/TzFnYcIqj6I/hqdefault.jpg"
+       class="w-full h-64 object-cover">
+</a>
+
+  <!-- VIDEO 3 -->
+<a href="https://www.youtube.com/watch?v=o6f593X6rv8" target="_blank"
+   class="block rounded-xl overflow-hidden neon-box hover:scale-105 transition">
+  <img src="https://img.youtube.com/vi/o6f593X6rv8/hqdefault.jpg"
+       class="w-full h-64 object-cover">
+</a>
+
+  </div>
+</section>
+
+
+  <footer class="text-center p-6 opacity-70 text-sm border-t border-white/20">
+    Proyecto para Informática 1 – Artes Multimediales
+  </footer>
+
+</body>
+</html>
