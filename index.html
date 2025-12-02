@@ -1,28 +1,131 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Previa</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reversiones 80s – Home</title>
 
-  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script defer src="/home/js/main.js"></script>
 </head>
 
-<body class="bg-black h-screen flex flex-col justify-center items-center gap-6">
+<body class="bg-black text-white font-sans">
 
-  <!-- Vinilo -->
-  <img 
-    src="home/img/disco.jpg"
-    alt="vinilo girando"
-    class="vinilo animate-spin-slow cursor-pointer"
-    id="vinilo"
-  >
+<header class="w-full p-6 flex justify-between items-center border-b border-white/20 relative">
 
-  <!-- Texto ENTRAR -->
-  <p class="text-white text-xl opacity-80 tracking-wider cursor-pointer" id="entrar">
-    ENTRAR
-  </p>
+  <a href="index.html">
+    <h1 class="text-3xl font-bold tracking-wide">80s</h1>
+  </a>
 
-  <script src="home/js/entrar.js"></script>
+  <!-- NAV DESKTOP -->
+  <nav class="hidden md:flex">
+    <ul class="flex gap-6 text-lg">
+      <li><a href="index.html" class="hover:underline">Home</a></li>
+      <li><a href="../galeria/index.html" class="hover:underline">Galería</a></li>
+      <li><a href="../discografia/index.html" class="hover:underline">Discografía</a></li>
+      <li><a href="../estetica/index.html" class="hover:underline">Estética</a></li>
+      <li><a href="../publicidad/index.html" class="hover:underline">Publicidad</a></li>
+      <li><a href="../top10/index.html" class="hover:underline">Top 10</a></li>
+      <li><a href="../8bits/index.html" class="hover:underline">8 Bits</a></li>
+    </ul>
+  </nav>
+
+  <!-- NAV MOBILE -->
+  <button id="navToggle" class="md:hidden text-3xl select-none">☰</button>
+
+  <nav id="navMenu"
+       class="hidden absolute top-full right-0 bg-black/90 border border-white/20
+              rounded-xl p-4 flex-col gap-4 text-lg md:hidden w-40 backdrop-blur-md">
+    <a href="index.html" class="block hover:underline">Home</a>
+    <a href="../galeria/index.html" class="block hover:underline">Galería</a>
+    <a href="../discografia/index.html" class="block hover:underline">Discografía</a>
+    <a href="../estetica/index.html" class="block hover:underline">Estética</a>
+    <a href="../publicidad/index.html" class="block hover:underline">Publicidad</a>
+    <a href="../top10/index.html" class="block hover:underline">Top 10</a>
+    <a href="../8bits/index.html" class="block hover:underline">8 Bits</a>
+  </nav>
+
+</header>
+
+  <!-- INTRO -->
+<section id="intro"
+  class="w-full h-72 flex flex-col items-center justify-center text-center
+         bg-cover bg-center bg-no-repeat relative"
+  style="background-image: url('https://i.pinimg.com/736x/e7/66/86/e76686d11259a2d0d8ae5dc2c1c61025.jpg');">
+
+  <!-- Capa oscura para que el texto se lea -->
+  <div class="absolute inset-0 bg-black/50"></div>
+
+  <!-- Contenido -->
+  <div class="relative z-10 max-w-3xl px-6">
+    <h2 class="text-4xl font-semibold mb-4">Explorando los 80 desde múltiples miradas</h2>
+    <p class="text-lg opacity-90">
+      Un recorrido por música, estética retro, cultura visual y referencias icónicas de la década.
+    </p>
+  </div>
+
+</section>
+
+  <!-- SECCIONES PRINCIPALES -->
+  <section id="secciones" class="p-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 max-w-6xl mx-auto">
+
+    <!-- ARTISTAS -->
+    <a href="../kate/index.html" class="block neon-box p-6 rounded-2xl hover:scale-105 transition">
+      <h3 class="text-2xl font-bold mb-2">Kate Bush</h3>
+      <p class="opacity-80">Running Up That Hill</p>
+    </a>
+
+    <a href="../cyndi/index.html" class="block neon-box p-6 rounded-2xl hover:scale-105 transition">
+      <h3 class="text-2xl font-bold mb-2">Cyndi Lauper</h3>
+      <p class="opacity-80">Girls Just Want to Have Fun</p>
+    </a>
+
+    <a href="../michael/index.html" class="block neon-box p-6 rounded-2xl hover:scale-105 transition">
+      <h3 class="text-2xl font-bold mb-2">Michael Jackson</h3>
+      <p class="opacity-80">Smooth Criminal</p>
+    </a>
+
+    <a href="../eurythmics/index.html" class="block neon-box p-6 rounded-2xl hover:scale-105 transition">
+      <h3 class="text-2xl font-bold mb-2">Eurythmics</h3>
+      <p class="opacity-80">Sweet Dreams</p>
+    </a>
+
+    <!-- NUEVAS SECCIONES EXTRA -->
+    <a href="../galeria/index.html" class="block neon-box p-6 rounded-2xl hover:scale-105 transition">
+      <h3 class="text-2xl font-bold mb-2">Galería</h3>
+      <p class="opacity-80">Imágenes y estética visual</p>
+    </a>
+
+    <a href="../discografia/index.html" class="block neon-box p-6 rounded-2xl hover:scale-105 transition">
+      <h3 class="text-2xl font-bold mb-2">Discografía</h3>
+      <p class="opacity-80">Portadas y álbumes icónicos</p>
+    </a>
+
+    <a href="../estetica/index.html" class="block neon-box p-6 rounded-2xl hover:scale-105 transition">
+      <h3 class="text-2xl font-bold mb-2">Estética 80s</h3>
+      <p class="opacity-80">Moda, colores y diseño retro</p>
+    </a>
+
+    <a href="../publicidad/index.html" class="block neon-box p-6 rounded-2xl hover:scale-105 transition">
+      <h3 class="text-2xl font-bold mb-2">Publicidad 80s</h3>
+      <p class="opacity-80">Anuncios y gráfica vintage</p>
+    </a>
+
+    <a href="../top10/index.html" class="block neon-box p-6 rounded-2xl hover:scale-105 transition">
+      <h3 class="text-2xl font-bold mb-2">Top 10</h3>
+      <p class="opacity-80">Lo más destacado de la década</p>
+    </a>
+  <a href="../8bits/index.html" class="block neon-box p-6 rounded-2xl hover:scale-105 transition">
+      <h3 class="text-2xl font-bold mb-2">8 BITS</h3>
+      <p class="opacity-80">Sonidos clásicos del 8bit</p>
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center p-6 opacity-70 text-sm border-t border-white/20">
+    Proyecto para Informática 1 – Artes Multimediales
+  </footer>
+
 </body>
 </html>
