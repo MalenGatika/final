@@ -5,8 +5,9 @@
 
 /* Custom global styles */
 body {
-  @apply 
+  @apply bg-black text-white;
 }
+
 
 header, footer {
   @apply w-full text-center;
@@ -249,4 +250,28 @@ footer {
   border-radius: 20px;
   text-align: center;
   color: white;
+}
+
+/* ----------------------
+   inicio 
+----------------------- */
+/* Animación de giro */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 6s linear infinite;
+}
+
+/* Vinilo responsive */
+.vinilo {
+  width: 260px;
+  height: 260px;
+  transition: transform 0.4s ease;
+}
+
+.vinilo:hover {
+  transform: scale(1.06);
 }
