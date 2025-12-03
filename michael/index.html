@@ -19,15 +19,37 @@
   </a>
 
   <!-- NAV DESKTOP -->
-  <nav class="hidden md:flex">
+  <nav class="hidden md:flex relative">
     <ul class="flex gap-6 text-lg">
+
       <li><a href="../home/index.html" class="hover:underline">Home</a></li>
+
+      <!-- ARTISTAS (DESPLEGABLE) -->
+      <li class="relative">
+        <button id="artistasBtn" class="hover:underline flex items-center gap-1">
+          Artistas ▼
+        </button>
+
+        <!-- MENÚ DESPLEGABLE pegado al botón -->
+        <ul id="artistasMenu"
+            class="absolute top-full left-0 mt-0 hidden bg-black/90 border border-white/20
+                   rounded-xl py-2 w-40 backdrop-blur-md z-50">
+
+          <li><a href="../kate/index.html" class="block px-4 py-2 hover:bg-white/10">Kate Bush</a></li>
+          <li><a href="../cyndi/index.html" class="block px-4 py-2 hover:bg-white/10">Cyndi Lauper</a></li>
+          <li><a href="../michael/index.html" class="block px-4 py-2 hover:bg-white/10">Michael Jackson</a></li>
+          <li><a href="../eurythmics/index.html" class="block px-4 py-2 hover:bg-white/10">Eurythmics</a></li>
+
+        </ul>
+      </li>
+
       <li><a href="../galeria/index.html" class="hover:underline">Galería</a></li>
       <li><a href="../discografia/index.html" class="hover:underline">Discografía</a></li>
       <li><a href="../estetica/index.html" class="hover:underline">Estética</a></li>
       <li><a href="../publicidad/index.html" class="hover:underline">Publicidad</a></li>
       <li><a href="../top10/index.html" class="hover:underline">Top 10</a></li>
       <li><a href="../8bits/index.html" class="hover:underline">8 Bits</a></li>
+
     </ul>
   </nav>
 
@@ -37,13 +59,28 @@
   <nav id="navMenu"
        class="hidden absolute top-full right-0 bg-black/90 border border-white/20
               rounded-xl p-4 flex-col gap-4 text-lg md:hidden w-40 backdrop-blur-md">
+
     <a href="../home/index.html" class="block hover:underline">Home</a>
+
+    <!-- ARTISTAS MOBILE (ACORDEÓN) -->
+    <button id="artistasMobileBtn" class="hover:underline text-left">
+      Artistas ▼
+    </button>
+
+    <div id="artistasMobileMenu" class="hidden flex-col pl-4 gap-2">
+      <a href="../kate/index.html" class="hover:underline">Kate Bush</a>
+      <a href="../cyndi/index.html" class="hover:underline">Cyndi Lauper</a>
+      <a href="../michael/index.html" class="hover:underline">Michael Jackson</a>
+      <a href="../eurythmics/index.html" class="hover:underline">Eurythmics</a>
+    </div>
+
     <a href="../galeria/index.html" class="block hover:underline">Galería</a>
     <a href="../discografia/index.html" class="block hover:underline">Discografía</a>
     <a href="../estetica/index.html" class="block hover:underline">Estética</a>
     <a href="../publicidad/index.html" class="block hover:underline">Publicidad</a>
     <a href="../top10/index.html" class="block hover:underline">Top 10</a>
     <a href="../8bits/index.html" class="block hover:underline">8 Bits</a>
+
   </nav>
 
 </header>

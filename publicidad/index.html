@@ -7,6 +7,7 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../css/style.css" />
+  <script defer src="../home/js/main.js"></script>
 </head>
 
 <body class="bg-black text-white font-sans">
@@ -18,15 +19,37 @@
   </a>
 
   <!-- NAV DESKTOP -->
-  <nav class="hidden md:flex">
+  <nav class="hidden md:flex relative">
     <ul class="flex gap-6 text-lg">
+
       <li><a href="../home/index.html" class="hover:underline">Home</a></li>
+
+      <!-- ARTISTAS (DESPLEGABLE) -->
+      <li class="relative">
+        <button id="artistasBtn" class="hover:underline flex items-center gap-1">
+          Artistas ▼
+        </button>
+
+        <!-- MENÚ DESPLEGABLE pegado al botón -->
+        <ul id="artistasMenu"
+            class="absolute top-full left-0 mt-0 hidden bg-black/90 border border-white/20
+                   rounded-xl py-2 w-40 backdrop-blur-md z-50">
+
+          <li><a href="../kate/index.html" class="block px-4 py-2 hover:bg-white/10">Kate Bush</a></li>
+          <li><a href="../cyndi/index.html" class="block px-4 py-2 hover:bg-white/10">Cyndi Lauper</a></li>
+          <li><a href="../michael/index.html" class="block px-4 py-2 hover:bg-white/10">Michael Jackson</a></li>
+          <li><a href="../eurythmics/index.html" class="block px-4 py-2 hover:bg-white/10">Eurythmics</a></li>
+
+        </ul>
+      </li>
+
       <li><a href="../galeria/index.html" class="hover:underline">Galería</a></li>
       <li><a href="../discografia/index.html" class="hover:underline">Discografía</a></li>
       <li><a href="../estetica/index.html" class="hover:underline">Estética</a></li>
       <li><a href="../publicidad/index.html" class="hover:underline">Publicidad</a></li>
       <li><a href="../top10/index.html" class="hover:underline">Top 10</a></li>
       <li><a href="../8bits/index.html" class="hover:underline">8 Bits</a></li>
+
     </ul>
   </nav>
 
@@ -36,13 +59,28 @@
   <nav id="navMenu"
        class="hidden absolute top-full right-0 bg-black/90 border border-white/20
               rounded-xl p-4 flex-col gap-4 text-lg md:hidden w-40 backdrop-blur-md">
+
     <a href="../home/index.html" class="block hover:underline">Home</a>
+
+    <!-- ARTISTAS MOBILE (ACORDEÓN) -->
+    <button id="artistasMobileBtn" class="hover:underline text-left">
+      Artistas ▼
+    </button>
+
+    <div id="artistasMobileMenu" class="hidden flex-col pl-4 gap-2">
+      <a href="../kate/index.html" class="hover:underline">Kate Bush</a>
+      <a href="../cyndi/index.html" class="hover:underline">Cyndi Lauper</a>
+      <a href="../michael/index.html" class="hover:underline">Michael Jackson</a>
+      <a href="../eurythmics/index.html" class="hover:underline">Eurythmics</a>
+    </div>
+
     <a href="../galeria/index.html" class="block hover:underline">Galería</a>
     <a href="../discografia/index.html" class="block hover:underline">Discografía</a>
     <a href="../estetica/index.html" class="block hover:underline">Estética</a>
     <a href="../publicidad/index.html" class="block hover:underline">Publicidad</a>
     <a href="../top10/index.html" class="block hover:underline">Top 10</a>
     <a href="../8bits/index.html" class="block hover:underline">8 Bits</a>
+
   </nav>
 
 </header>
@@ -72,6 +110,8 @@
            alt="sabritas 80s">
     </div>
     <p class="text-center py-3 font-semibold">Sabritas</p>
+      <p class="text-sm opacity-80 mt-1 text-center">
+En los años 80, Sabritas reforzó su imagen como snack juvenil y divertido. Sus publicidades destacaban el color, la exageración y el humor físico, características típicas de la estética televisiva de la década. Este spot refleja la energía acelerada de la televisión mexicana del momento y el boom de los snacks en Latinoamérica.  </p>
   </a>
 
   <!-- IMG 2 -->
@@ -83,6 +123,8 @@
            alt="Apple 1984">
     </div>
     <p class="text-center py-3 font-semibold">Apple • “1984”</p>
+     <p class="text-sm opacity-80 mt-1 text-center">
+Dirigido por Ridley Scott, este comercial se emitió durante el Super Bowl de 1984 y marcó un antes y un después en la historia de la publicidad. Apple se posiciona aquí como la marca rebelde que viene a "romper" con la tecnología dominante de la época. La estética distópica, inspirada en George Orwell, volvió al anuncio un ícono del marketing y de la cultura pop.  </p>
   </a>
 
   <!-- IMG 3 -->
@@ -94,7 +136,65 @@
            alt="bombero loco 80s">
     </div>
     <p class="text-center py-3 font-semibold">Bombero Loco</p>
+    <p class="text-sm opacity-80 mt-1 text-center">
+En Argentina, los 80 fueron una época dorada para la publicidad humorística. El spot del “Bombero Loco” combina situaciones absurdas, actuación exagerada y un jingle pegadizo, elementos típicos de la época. Es un ejemplo perfecto del tono lúdico y descontracturado que tenían muchos comerciales locales del período.    </p>
   </a>
+  <!-- IMG 4 -->
+<a href="https://youtu.be/ABbQMfuwgeI" target="_blank"
+   class="block neon-box rounded-xl overflow-hidden hover:scale-105 transition">
+  
+  <div class="aspect-video w-full">
+    <img src="https://i.ytimg.com/vi/ABbQMfuwgeI/hqdefault.jpg"
+         class="w-full h-full object-cover"
+         alt="Stani 1985">
+  </div>
+
+  <div class="p-3">
+    <p class="text-center font-semibold">Stani • 1985</p>
+    <p class="text-sm opacity-80 mt-1 text-center">
+      Un clásico de la publicidad argentina: ritmo pegadizo, colores fuertes y humor simple, típico del estilo ochentoso.
+    </p>
+  </div>
+</a>
+  <!-- IMG 5 -->
+
+<a href="https://youtu.be/YtmmyG2IjLU" target="_blank"
+   class="block neon-box rounded-xl overflow-hidden hover:scale-105 transition">
+
+
+  <div class="aspect-video w-full">
+    <img src="https://i.ytimg.com/vi/YtmmyG2IjLU/hqdefault.jpg"
+         class="w-full h-full object-cover"
+         alt="Paty 1987">
+  </div>
+
+  <div class="p-3">
+    <p class="text-center font-semibold">Paty te quiero • 1987</p>
+    <p class="text-sm opacity-80 mt-1 text-center">
+      Este spot mezcla romance adolescente y estética pop, muy influenciada por los videoclips de la época.
+    </p>
+  </div>
+</a>
+  <!-- IMG 6 -->
+
+<a href="https://youtu.be/KwSUVfnGVfI" target="_blank"
+   class="block neon-box rounded-xl overflow-hidden hover:scale-105 transition">
+
+  <div class="aspect-video w-full">
+    <img src="https://i.ytimg.com/vi/KwSUVfnGVfI/hqdefault.jpg"
+         class="w-full h-full object-cover"
+         alt="Sugus 1982">
+  </div>
+
+  <div class="p-3">
+    <p class="text-center font-semibold">Caramelos Sugus • 1982</p>
+    <p class="text-sm opacity-80 mt-1 text-center">
+      Un anuncio simple y directo que jugaba con la alegría infantil y la paleta súper saturada que caracterizó a los 80.
+    </p>
+  </div>
+</a>
+
+
 
 </div>
 

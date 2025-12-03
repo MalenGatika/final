@@ -252,26 +252,71 @@ footer {
   color: white;
 }
 
-/* ----------------------
-   inicio 
------------------------ */
-/* Animación de giro */
-@keyframes spin-slow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+/* =============================
+   PANTALLA DE INICIO
+============================= */
+
+/* Anular fondo negro global */
+body.inicio {
+  background: none !important;
 }
 
-.animate-spin-slow {
-  animation: spin-slow 6s linear infinite;
+/* Imagen fullscreen */
+body.inicio {
+  background-image: url("../home/img/disco2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;               /* CENTRADO */
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
 }
 
-/* Vinilo responsive */
-.vinilo {
-  width: 260px;
-  height: 260px;
-  transition: transform 0.4s ease;
+/* Texto ENTRAR */
+.inicio-entrar {
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: 12px;
+  color: rgb(93, 202, 3);
+  text-transform: uppercase;
+  cursor: pointer;
+
+  text-shadow:
+    0 0 8px #3ec002,
+    0 0 15px #130710,
+    0 0 30px rgba(229, 255, 0, 0.8);
+
+  animation: neonPulse 2.2s ease-in-out infinite alternate;
+  transition: transform .25s;
 }
 
-.vinilo:hover {
-  transform: scale(1.06);
+.inicio-entrar:hover {
+  transform: scale(1.1);
+}
+
+/* ----------------------------------------
+   INICIO — Background fullscreen (no se pisa)
+---------------------------------------- */
+
+.inicio-screen {
+  background-image: url("../home/img/fondo2.jpg") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+
+  width: 100vw !important;
+  height: 100vh !important;
+  overflow: hidden !important;
+
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
