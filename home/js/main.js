@@ -59,23 +59,22 @@ fadeElements.forEach((el) => {
 // -----------------------------------------------------
 
 // Desktop
-const artistasBtn = document.getElementById("artistasBtn");
-const artistasMenu = document.getElementById("artistasMenu");
-
+// Desktop
 if (artistasBtn && artistasMenu) {
   artistasBtn.addEventListener("mouseenter", () => {
-    artistasMenu.classList.remove("hidden");
+    artistasMenu.classList.remove("hidden", "pointer-events-none");
   });
   artistasBtn.addEventListener("mouseleave", () => {
-    artistasMenu.classList.add("hidden");
+    artistasMenu.classList.add("hidden", "pointer-events-none");
   });
   artistasMenu.addEventListener("mouseenter", () => {
-    artistasMenu.classList.remove("hidden");
+    artistasMenu.classList.remove("hidden", "pointer-events-none");
   });
   artistasMenu.addEventListener("mouseleave", () => {
-    artistasMenu.classList.add("hidden");
+    artistasMenu.classList.add("hidden", "pointer-events-none");
   });
 }
+
 
 // Mobile
 const artistasMobileBtn = document.getElementById("artistasMobileBtn");
