@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto – 80s</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="css/style.css" />
+  
+  <script defer src="home/js/main.js"></script>
+  <script defer src="contacto.js"></script>
+</head>
+
+<body class="bg-black text-white">
+
+<!-- HEADER -->
+<header class="w-full p-6 flex justify-between items-center border-b border-white/20 relative">
+
+  <a href="../home/index.html">
+    <h1 class="text-3xl font-bold tracking-wide">80s</h1>
+  </a>
+
+  <!-- NAV DESKTOP -->
+  <nav class="hidden md:flex relative">
+    <ul class="flex gap-8 text-lg items-center">
+
+      <li><a href="home/index.html" class="hover:underline">Home</a></li>
+
+      <li class="relative">
+        <button id="artistasBtn" class="hover:underline flex items-center gap-1">
+          Artistas ▼
+        </button>
+
+        <ul id="artistasMenu"
+            class="absolute top-full left-0 mt-0 hidden bg-black border border-white/30
+                   shadow-xl rounded-2xl py-3 w-48 z-50">
+          <li><a href="kate/index.html" class="block px-4 py-2 hover:bg-white/10">Kate Bush</a></li>
+          <li><a href="cyndi/index.html" class="block px-4 py-2 hover:bg-white/10">Cyndi Lauper</a></li>
+          <li><a href="michael/index.html" class="block px-4 py-2 hover:bg-white/10">Michael Jackson</a></li>
+          <li><a href="eurythmics/index.html" class="block px-4 py-2 hover:bg-white/10">Eurythmics</a></li>
+        </ul>
+      </li>
+
+      <li><a href="galeria/index.html" class="hover:underline">Galería</a></li>
+      <li><a href="discografia/index.html" class="hover:underline">Discografía</a></li>
+      <li><a href="estetica/index.html" class="hover:underline">Estética</a></li>
+      <li><a href="publicidad/index.html" class="hover:underline">Publicidad</a></li>
+      <li><a href="top10/index.html" class="hover:underline">Top 10</a></li>
+      <li><a href="8bits/index.html" class="hover:underline">8 Bits</a></li>
+      <li><a href="contacto/index.html" class="underline">Contacto</a></li>
+
+    </ul>
+  </nav>
+
+  <!-- NAV MOBILE toggle -->
+  <button id="navToggle" class="md:hidden text-3xl select-none">☰</button>
+
+  <!-- NAV MOBILE -->
+  <nav id="navMenu"
+       class="hidden absolute top-full right-4 bg-black border border-white/30 shadow-2xl
+              rounded-2xl p-5 flex-col gap-5 text-xl md:hidden w-56 z-50">
+
+    <a href="home/index.html" class="block hover:underline">Home</a>
+
+    <button id="artistasMobileBtn"
+            class="hover:underline text-left flex items-center justify-between">
+      Artistas <span>▼</span>
+    </button>
+
+    <div id="artistasMobileMenu"
+         class="hidden flex-col pl-4 gap-3 text-lg">
+      <a href="kate/index.html" class="hover:underline">• Kate Bush</a>
+      <a href="cyndi/index.html" class="hover:underline">• Cyndi Lauper</a>
+      <a href="michael/index.html" class="hover:underline">• Michael Jackson</a>
+      <a href="eurythmics/index.html" class="hover:underline">• Eurythmics</a>
+    </div>
+
+    <a href="galeria/index.html" class="block hover:underline">Galería</a>
+    <a href="discografia/index.html" class="block hover:underline">Discografía</a>
+    <a href="estetica/index.html" class="block hover:underline">Estética</a>
+    <a href="publicidad/index.html" class="block hover:underline">Publicidad</a>
+    <a href="top10/index.html" class="block hover:underline">Top 10</a>
+    <a href="8bits/index.html" class="block hover:underline">8 Bits</a>
+    <a href="contacto/index.html" class="block underline">Contacto</a>
+
+  </nav>
+
+</header>
+
+<!-- MAIN -->
+<main class="max-w-3xl mx-auto p-10">
+
+  <h2 class="text-4xl font-bold mb-6">Contacto</h2>
+  <p class="opacity-80 mb-10">
+    ¿Querés dejar un mensaje, hacer una consulta o comentar el proyecto?
+    ¡Escribinos! El espíritu retro siempre está online 🎛️🎶
+  </p>
+
+  <!-- FORMULARIO -->
+  <form id="contactForm" action="https://formspree.io/f/xnnezypa" method="POST" class="space-y-6">
+
+    <div>
+      <label class="block mb-2 font-semibold">Nombre</label>
+      <input
+        id="nombre"
+        name="nombre"
+        type="text"
+        required
+        class="w-full p-3 rounded-xl bg-black border border-white/30 
+               focus:outline-none focus:ring-2 focus:ring-purple-500
+               shadow-inner placeholder-white/50"
+        placeholder="Tu nombre..."
+      />
+    </div>
+
+    <div>
+      <label class="block mb-2 font-semibold">Email</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        required
+        class="w-full p-3 rounded-xl bg-black border border-white/30
+               focus:outline-none focus:ring-2 focus:ring-pink-500
+               shadow-inner placeholder-white/50"
+        placeholder="tunombre@mail.com"
+      />
+    </div>
+
+    <div>
+      <label class="block mb-2 font-semibold">Mensaje</label>
+      <textarea
+        id="mensaje"
+        name="mensaje"
+        rows="5"
+        required
+        class="w-full p-3 rounded-xl bg-black border border-white/30
+               focus:outline-none focus:ring-2 focus:ring-blue-500
+               shadow-inner placeholder-white/50"
+        placeholder="Escribí tu mensaje..."
+      ></textarea>
+    </div>
+
+    <button
+      class="w-full py-3 mt-4 rounded-xl bg-gradient-to-r from-pink-500 to-purple-600
+             font-semibold text-lg shadow-xl hover:opacity-90 transition">
+      Enviar mensaje
+    </button>
+
+  </form>
+
+  <!-- CARTEL RETRO (hidden por defecto) -->
+  <div id="retroAlert" class="retro-alert hidden">
+    ¡Mensaje enviado! ✨  
+    Pronto recibirás una respuesta.
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="text-center p-6 opacity-70 text-sm border-t border-white/20">
+  Proyecto para Informática 1 – Artes Multimediales
+</footer>
+
+</body>
+</html>

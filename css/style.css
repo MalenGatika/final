@@ -320,3 +320,26 @@ body.inicio {
   justify-content: center !important;
   align-items: center !important;
 }
+
+/* FORMULAROI DE CONTACTO Cartel VHS / neón */
+.retro-alert {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid #ff00ff;
+  padding: 20px 32px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 0 20px #ff00ff, 0 0 40px #8800ff;
+  animation: neonPulse 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes neonPulse {
+  from { box-shadow: 0 0 15px #ff00ff; }
+  to { box-shadow: 0 0 30px #ff00ff, 0 0 50px #8800ff; }
+}
