@@ -16,26 +16,26 @@
 
 <header class="w-full p-6 flex justify-between items-center border-b border-white/20 relative">
 
+  <!-- LOGO -->
   <a href="../home/index.html">
     <h1 class="text-3xl font-bold tracking-wide">80s</h1>
   </a>
 
   <!-- NAV DESKTOP -->
   <nav class="hidden md:flex relative">
-    <ul class="flex gap-6 text-lg">
+    <ul class="flex gap-8 text-lg items-center">
 
       <li><a href="../home/index.html" class="hover:underline">Home</a></li>
 
-      <!-- ARTISTAS (DESPLEGABLE) -->
+      <!-- ARTISTAS DESKTOP -->
       <li class="relative">
         <button id="artistasBtn" class="hover:underline flex items-center gap-1">
           Artistas ▼
         </button>
 
-        <!-- MENÚ DESPLEGABLE pegado al botón -->
         <ul id="artistasMenu"
-            class="absolute top-full left-0 mt-0 hidden bg-black/90 border border-white/20
-                   rounded-xl py-2 w-40 backdrop-blur-md z-50">
+            class="absolute top-full left-0 mt-2 hidden bg-black border border-white/30
+                   shadow-xl rounded-2xl py-3 w-48 z-50">
 
           <li><a href="../kate/index.html" class="block px-4 py-2 hover:bg-white/10">Kate Bush</a></li>
           <li><a href="../cyndi/index.html" class="block px-4 py-2 hover:bg-white/10">Cyndi Lauper</a></li>
@@ -55,25 +55,30 @@
     </ul>
   </nav>
 
-  <!-- NAV MOBILE -->
+  <!-- NAV MOBILE TOGGLE -->
   <button id="navToggle" class="md:hidden text-3xl select-none">☰</button>
 
+  <!-- NAV MOBILE -->
   <nav id="navMenu"
-       class="hidden absolute top-full right-0 bg-black/90 border border-white/20
-              rounded-xl p-4 flex-col gap-4 text-lg md:hidden w-40 backdrop-blur-md">
+       class="hidden absolute top-full right-4 bg-black border border-white/30 shadow-2xl
+              rounded-2xl p-5 flex-col gap-5 text-xl md:hidden w-56 z-50">
 
     <a href="../home/index.html" class="block hover:underline">Home</a>
 
-    <!-- ARTISTAS MOBILE (ACORDEÓN) -->
-    <button id="artistasMobileBtn" class="hover:underline text-left">
-      Artistas ▼
+    <!-- ARTISTAS MOBILE -->
+    <button id="artistasMobileBtn"
+            class="hover:underline text-left flex items-center justify-between">
+      Artistas <span>▼</span>
     </button>
 
-    <div id="artistasMobileMenu" class="hidden flex-col pl-4 gap-2">
-      <a href="../kate/index.html" class="hover:underline">Kate Bush</a>
-      <a href="../cyndi/index.html" class="hover:underline">Cyndi Lauper</a>
-      <a href="../michael/index.html" class="hover:underline">Michael Jackson</a>
-      <a href="../eurythmics/index.html" class="hover:underline">Eurythmics</a>
+    <div id="artistasMobileMenu"
+         class="hidden flex-col pl-4 gap-3 text-lg">
+
+      <a href="../kate/index.html" class="hover:underline">• Kate Bush</a>
+      <a href="../cyndi/index.html" class="hover:underline">• Cyndi Lauper</a>
+      <a href="../michael/index.html" class="hover:underline">• Michael Jackson</a>
+      <a href="../eurythmics/index.html" class="hover:underline">• Eurythmics</a>
+
     </div>
 
     <a href="../galeria/index.html" class="block hover:underline">Galería</a>
