@@ -13,7 +13,6 @@
 <body class="bg-black text-white font-sans">
 
 <header class="w-full p-6 flex justify-between items-center border-b border-white/20 relative">
-
   <!-- LOGO -->
   <a href="../home/index.html">
     <h1 class="text-3xl font-bold tracking-wide">80s</h1>
@@ -34,12 +33,10 @@
         <ul id="artistasMenu"
             class="absolute top-full left-0 mt-0 hidden bg-black border border-white/30
                    shadow-xl rounded-2xl py-3 w-48 z-50">
-
           <li><a href="../kate/index.html" class="block px-4 py-2 hover:bg-white/10">Kate Bush</a></li>
           <li><a href="../cyndi/index.html" class="block px-4 py-2 hover:bg-white/10">Cyndi Lauper</a></li>
           <li><a href="../michael/index.html" class="block px-4 py-2 hover:bg-white/10">Michael Jackson</a></li>
           <li><a href="../eurythmics/index.html" class="block px-4 py-2 hover:bg-white/10">Eurythmics</a></li>
-
         </ul>
       </li>
 
@@ -47,10 +44,9 @@
       <li><a href="../discografia/index.html" class="hover:underline">Discografía</a></li>
       <li><a href="../estetica/index.html" class="hover:underline">Estética</a></li>
       <li><a href="../publicidad/index.html" class="hover:underline">Publicidad</a></li>
-      <li><a href="../top10/index.html" class="hover:underline">Top 10</a></li>
+      <li><a href="../top10/index.html" class="hover:underline font-bold text-pink-400">Top 10</a></li>
       <li><a href="../8bits/index.html" class="hover:underline">8 Bits</a></li>
-          <li><a href="../contacto.html" class="block hover:underline">Contacto</a></li>
-
+      <li><a href="../contacto.html" class="block hover:underline">Contacto</a></li>
 
     </ul>
   </nav>
@@ -65,7 +61,6 @@
 
     <a href="../home/index.html" class="block hover:underline">Home</a>
 
-    <!-- ARTISTAS MOBILE -->
     <button id="artistasMobileBtn"
             class="hover:underline text-left flex items-center justify-between">
       Artistas <span>▼</span>
@@ -73,59 +68,180 @@
 
     <div id="artistasMobileMenu"
          class="hidden flex-col pl-4 gap-3 text-lg">
-
       <a href="../kate/index.html" class="hover:underline">• Kate Bush</a>
       <a href="../cyndi/index.html" class="hover:underline">• Cyndi Lauper</a>
       <a href="../michael/index.html" class="hover:underline">• Michael Jackson</a>
       <a href="../eurythmics/index.html" class="hover:underline">• Eurythmics</a>
-
     </div>
 
     <a href="../galeria/index.html" class="block hover:underline">Galería</a>
     <a href="../discografia/index.html" class="block hover:underline">Discografía</a>
     <a href="../estetica/index.html" class="block hover:underline">Estética</a>
     <a href="../publicidad/index.html" class="block hover:underline">Publicidad</a>
-    <a href="../top10/index.html" class="block hover:underline">Top 10</a>
+    <a href="../top10/index.html" class="block hover:underline font-bold text-pink-400">Top 10</a>
     <a href="../8bits/index.html" class="block hover:underline">8 Bits</a>
     <a href="../contacto.html" class="block hover:underline">Contacto</a>
-
-
   </nav>
-
 </header>
 
+<!-- HERO EDITORIAL CON IMAGEN FONDO -->
+<section class="relative pt-24 pb-24 px-10 mb-20 overflow-hidden rounded-3xl border border-white/20">
 
+  <!-- imagen de fondo -->
+  <div class="absolute inset-0">
+    <img 
+      src="img/ranking.png" 
+      alt="Billboard Hot 100"
+      class="w-full h-full object-cover scale-105 blur-[2px]"
+    />
+    <div class="absolute inset-0 bg-black/70"></div>
+  </div>
 
+  <!-- contenido encima -->
+  <div class="relative z-10 text-center">
+ <h2 class="text-[10vw] font-black leading-none uppercase tracking-[0.2em] neon-title">
 
-
-  <!-- CONTENIDO -->
-  <section class="p-10 max-w-3xl mx-auto">
-
-    <h2 class="text-4xl neon-title font-bold mb-8 text-center">
-      Top 10 Hits de los años 80
+      Top&nbsp;10
     </h2>
 
-    <ol class="space-y-4 text-lg">
+    <p class="max-w-2xl mx-auto mt-6 text-lg opacity-80 leading-relaxed">
+      Un ranking editorial de canciones que definieron la identidad visual y sonora de los años 80.
+    </p>
+  </div>
 
-      <li class="neon-box p-4 rounded-xl">1. **Michael Jackson – Billie Jean** (1982)</li>
-      <li class="neon-box p-4 rounded-xl">2. **Cyndi Lauper – Girls Just Want to Have Fun** (1983)</li>
-      <li class="neon-box p-4 rounded-xl">3. **Prince – Purple Rain** (1984)</li>
-      <li class="neon-box p-4 rounded-xl">4. **Madonna – Like a Virgin** (1984)</li>
-      <li class="neon-box p-4 rounded-xl">5. **a-ha – Take On Me** (1985)</li>
-      <li class="neon-box p-4 rounded-xl">6. **Eurythmics – Sweet Dreams** (1983)</li>
-      <li class="neon-box p-4 rounded-xl">7. **Whitney Houston – I Wanna Dance with Somebody** (1987)</li>
-      <li class="neon-box p-4 rounded-xl">8. **Queen – Another One Bites the Dust** (1980)</li>
-      <li class="neon-box p-4 rounded-xl">9. **Blondie – Call Me** (1980)</li>
-      <li class="neon-box p-4 rounded-xl">10. **Toto – Africa** (1982)</li>
+</section>
 
-    </ol>
 
-  </section>
+<!-- BLOQUE MAGAZINE -->
+<section class="max-w-5xl mx-auto px-10 pb-24">
 
-  <!-- FOOTER -->
-  <footer class="text-center p-6 opacity-70 text-sm border-t border-white/20">
-    Proyecto para Informática 1 – Artes Multimediales
-  </footer>
+<!-- 01 -->
+<li class="group border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between gap-6 hover:border-pink-400 transition">
+  <div class="flex gap-6 items-start">
+    <span class="text-6xl font-black text-white/10 group-hover:text-pink-400 transition">01</span>
+    <div>
+      <h3 class="text-2xl font-bold group-hover:text-pink-400 transition">Michael Jackson – Billie Jean</h3>
+      <p class="opacity-70 mt-2 text-sm">Nueva estética del pop como imagen total.</p>
+    </div>
+  </div>
+  <a href="https://www.youtube.com/watch?v=Zi_XLOBDo_Y" target="_blank" class="text-3xl opacity-40 hover:opacity-100 transition cursor-pointer">▶</a>
+</li>
+
+<!-- 02 -->
+<li class="group border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between gap-6 hover:border-pink-400 transition">
+  <div class="flex gap-6 items-start">
+    <span class="text-6xl font-black text-white/10 group-hover:text-pink-400 transition">02</span>
+    <div>
+      <h3 class="text-2xl font-bold group-hover:text-pink-400 transition">Cyndi Lauper – Girls Just Want to Have Fun</h3>
+      <p class="opacity-70 mt-2 text-sm">Feminismo pop, color y actitud.</p>
+    </div>
+  </div>
+  <a href="https://www.youtube.com/watch?v=PIb6AZdTr-A" target="_blank" class="text-3xl opacity-40 hover:opacity-100 transition cursor-pointer">▶</a>
+</li>
+
+<!-- 03 -->
+<li class="group border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between gap-6 hover:border-pink-400 transition">
+  <div class="flex gap-6 items-start">
+    <span class="text-6xl font-black text-white/10 group-hover:text-pink-400 transition">03</span>
+    <div>
+      <h3 class="text-2xl font-bold group-hover:text-pink-400 transition">Prince – Purple Rain</h3>
+      <p class="opacity-70 mt-2 text-sm">Romance dramático y virtuosismo eléctrico.</p>
+    </div>
+  </div>
+  <a href="https://www.youtube.com/watch?v=TvnYmWpD_T8" target="_blank" class="text-3xl opacity-40 hover:opacity-100 transition cursor-pointer">▶</a>
+</li>
+
+<!-- 04 -->
+<li class="group border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between gap-6 hover:border-pink-400 transition">
+  <div class="flex gap-6 items-start">
+    <span class="text-6xl font-black text-white/10 group-hover:text-pink-400 transition">04</span>
+    <div>
+      <h3 class="text-2xl font-bold group-hover:text-pink-400 transition">Madonna – Like a Virgin</h3>
+      <p class="opacity-70 mt-2 text-sm">Provocación, moda y videoclip como manifiesto.</p>
+    </div>
+  </div>
+  <a href="https://www.youtube.com/watch?v=s__rX_WL100" target="_blank" class="text-3xl opacity-40 hover:opacity-100 transition cursor-pointer">▶</a>
+</li>
+
+<!-- 05 -->
+<li class="group border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between gap-6 hover:border-pink-400 transition">
+  <div class="flex gap-6 items-start">
+    <span class="text-6xl font-black text-white/10 group-hover:text-pink-400 transition">05</span>
+    <div>
+      <h3 class="text-2xl font-bold group-hover:text-pink-400 transition">a-ha – Take On Me</h3>
+      <p class="opacity-70 mt-2 text-sm">Animación + live action como lenguaje nuevo.</p>
+    </div>
+  </div>
+  <a href="https://www.youtube.com/watch?v=djV11Xbc914" target="_blank" class="text-3xl opacity-40 hover:opacity-100 transition cursor-pointer">▶</a>
+</li>
+
+<!-- 06 -->
+<li class="group border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between gap-6 hover:border-pink-400 transition">
+  <div class="flex gap-6 items-start">
+    <span class="text-6xl font-black text-white/10 group-hover:text-pink-400 transition">06</span>
+    <div>
+      <h3 class="text-2xl font-bold group-hover:text-pink-400 transition">Eurythmics – Sweet Dreams</h3>
+      <p class="opacity-70 mt-2 text-sm">Frialdad electrónica, imagen andrógina, loop infinito.</p>
+    </div>
+  </div>
+  <a href="https://www.youtube.com/watch?v=qeMFqkcPYcg" target="_blank" class="text-3xl opacity-40 hover:opacity-100 transition cursor-pointer">▶</a>
+</li>
+
+<!-- 07 -->
+<li class="group border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between gap-6 hover:border-pink-400 transition">
+  <div class="flex gap-6 items-start">
+    <span class="text-6xl font-black text-white/10 group-hover:text-pink-400 transition">07</span>
+    <div>
+      <h3 class="text-2xl font-bold group-hover:text-pink-400 transition">Whitney Houston – I Wanna Dance with Somebody</h3>
+      <p class="opacity-70 mt-2 text-sm">Euforia, técnica vocal y espectáculo.</p>
+    </div>
+  </div>
+  <a href="https://www.youtube.com/watch?v=eH3giaIzONA" target="_blank" class="text-3xl opacity-40 hover:opacity-100 transition cursor-pointer">▶</a>
+</li>
+
+<!-- 08 -->
+<li class="group border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between gap-6 hover:border-pink-400 transition">
+  <div class="flex gap-6 items-start">
+    <span class="text-6xl font-black text-white/10 group-hover:text-pink-400 transition">08</span>
+    <div>
+      <h3 class="text-2xl font-bold group-hover:text-pink-400 transition">Queen – Another One Bites the Dust</h3>
+      <p class="opacity-70 mt-2 text-sm">Bajo protagonista, groove minimalista y actitud rock.</p>
+    </div>
+  </div>
+  <a href="https://www.youtube.com/watch?v=rY0WxgSXdEE" target="_blank" class="text-3xl opacity-40 hover:opacity-100 transition cursor-pointer">▶</a>
+</li>
+
+<!-- 09 -->
+<li class="group border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between gap-6 hover:border-pink-400 transition">
+  <div class="flex gap-6 items-start">
+    <span class="text-6xl font-black text-white/10 group-hover:text-pink-400 transition">09</span>
+    <div>
+      <h3 class="text-2xl font-bold group-hover:text-pink-400 transition">Blondie – Call Me</h3>
+      <p class="opacity-70 mt-2 text-sm">New wave, cine y velocidad urbana.</p>
+    </div>
+  </div>
+  <a href="https://www.youtube.com/watch?v=StKVS0eI85I" target="_blank" class="text-3xl opacity-40 hover:opacity-100 transition cursor-pointer">▶</ a>
+</li>
+
+<!-- 10 -->
+<li class="group border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between gap-6 hover:border-pink-400 transition">
+  <div class="flex gap-6 items-start">
+    <span class="text-6xl font-black text-white/10 group-hover:text-pink-400 transition">10</span>
+    <div>
+      <h3 class="text-2xl font-bold group-hover:text-pink-400 transition">Toto – Africa</h3>
+      <p class="opacity-70 mt-2 text-sm">Exotismo ochentoso, sintetizadores y épica pop.</p>
+    </div>
+  </div>
+  <a href="https://www.youtube.com/watch?v=FTQbiNvZqaY" target="_blank" class="text-3xl opacity-40 hover:opacity-100 transition cursor-pointer">▶</a>
+</li>
+
+
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center p-6 opacity-70 text-sm border-t border-white/20">
+  Proyecto para Informática 1 – Artes Multimediales
+</footer>
 
 </body>
 </html>
