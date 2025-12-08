@@ -279,20 +279,62 @@ body.inicio {
 
   overflow: hidden;
 }
+/* -------------------------------
+   TEXTO INTRO – PORTADA
+-------------------------------- */
+
+/* MEJORAR LEGIBILIDAD DEL TEXTO EN PORTADA */
+
+.inicio-texto {
+  position: absolute;
+  top: 10%;
+  text-align: center;
+  z-index: 10;
+
+  background: rgba(0, 0, 0, 0.45);
+  padding: 20px 40px;
+  border-radius: 20px;
+
+  box-shadow: 
+    0 0 20px rgba(0, 0, 0, 0.8),
+    0 0 40px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+}
+
+.inicio-titulo {
+  font-size: 2.4rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow:
+    0 0 8px rgba(2, 37, 37, 0.6),
+    0 0 18px rgba(11, 22, 22, 0.3);
+}
+
+.inicio-descripcion {
+  font-size: 1.5rem;
+  line-height: 2;
+  letter-spacing: 0.2em;
+  color: rgba(255,255,255,0.9);
+  margin-top: 100px;
+}
+
 
 /* Texto ENTRAR */
 .inicio-entrar {
+   position: relative;
+  top: 40px;
   font-size: 4rem;
   font-weight: bold;
   letter-spacing: 12px;
-  color: rgb(93, 202, 3);
+  color: rgb(4, 7, 1);
   text-transform: uppercase;
   cursor: pointer;
 
   text-shadow:
     0 0 8px #3ec002,
     0 0 15px #130710,
-    0 0 30px rgba(229, 255, 0, 0.8);
+    0 0 30px rgba(5, 5, 0, 0.8);
 
   animation: neonPulse 2.2s ease-in-out infinite alternate;
   transition: transform .25s;
