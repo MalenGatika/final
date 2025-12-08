@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Then vs Now – Reversiones 80s</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script defer src="../home/js/main.js"></script>
+</head>
+
+<body class="bg-black text-white font-sans">
+
+<!-- HEADER -->
+<header class="w-full p-6 flex justify-between items-center border-b border-white/20 relative">
+
+  <a href="../home/index.html">
+    <h1 class="text-3xl font-bold tracking-wide">80s</h1>
+  </a>
+
+  <!-- NAV DESKTOP -->
+  <nav class="hidden md:flex relative">
+    <ul class="flex gap-8 text-lg items-center">
+
+      <li><a href="../home/index.html" class="hover:underline">Home</a></li>
+
+      <li class="relative">
+        <button id="artistasBtn" class="hover:underline flex items-center gap-1">
+          Artistas ▼
+        </button>
+
+        <ul id="artistasMenu"
+            class="absolute top-full left-0 mt-0 hidden bg-black border border-white/30
+                   shadow-xl rounded-2xl py-3 w-48 z-50">
+          <li><a href="../kate/index.html" class="block px-4 py-2 hover:bg-white/10">Kate Bush</a></li>
+          <li><a href="../cyndi/index.html" class="block px-4 py-2 hover:bg-white/10">Cyndi Lauper</a></li>
+          <li><a href="../michael/index.html" class="block px-4 py-2 hover:bg-white/10">Michael Jackson</a></li>
+          <li><a href="../eurythmics/index.html" class="block px-4 py-2 hover:bg-white/10">Eurythmics</a></li>
+        </ul>
+      </li>
+
+      <li><a href="../galeria/index.html" class="hover:underline">Galería</a></li>
+      <li><a href="../discografia/index.html" class="hover:underline">Discografía</a></li>
+      <li><a href="../estetica/index.html" class="hover:underline">Estética</a></li>
+      <li><a href="../publicidad/index.html" class="hover:underline">Publicidad</a></li>
+      <li><a href="../top10/index.html" class="hover:underline">Top 10</a></li>
+      <li><a href="../8bits/index.html" class="hover:underline">8 Bits</a></li>
+      <li><a href="../versus/index.html" class="hover:underline font-bold text-pink-400">Then vs Now</a></li>
+      <li><a href="../contacto.html" class="block hover:underline">Contacto</a></li>
+
+    </ul>
+  </nav>
+
+  <!-- NAV MOBILE TOGGLE -->
+  <button id="navToggle" class="md:hidden text-3xl select-none">☰</button>
+
+  <!-- NAV MOBILE -->
+  <nav id="navMenu"
+       class="hidden absolute top-full right-4 bg-black border border-white/30 shadow-2xl
+              rounded-2xl p-5 flex-col gap-5 text-xl md:hidden w-56 z-50">
+
+    <a href="../home/index.html" class="block hover:underline">Home</a>
+
+    <button id="artistasMobileBtn"
+            class="hover:underline text-left flex items-center justify-between">
+      Artistas <span>▼</span>
+    </button>
+
+    <div id="artistasMobileMenu"
+         class="hidden flex-col pl-4 gap-3 text-lg">
+      <a href="../kate/index.html" class="hover:underline">• Kate Bush</a>
+      <a href="../cyndi/index.html" class="hover:underline">• Cyndi Lauper</a>
+      <a href="../michael/index.html" class="hover:underline">• Michael Jackson</a>
+      <a href="../eurythmics/index.html" class="hover:underline">• Eurythmics</a>
+    </div>
+
+    <a href="../galeria/index.html" class="block hover:underline">Galería</a>
+    <a href="../discografia/index.html" class="block hover:underline">Discografía</a>
+    <a href="../estetica/index.html" class="block hover:underline">Estética</a>
+    <a href="../publicidad/index.html" class="block hover:underline">Publicidad</a>
+    <a href="../top10/index.html" class="block hover:underline">Top 10</a>
+    <a href="../8bits/index.html" class="block hover:underline">8 Bits</a>
+    <a href="../versus/index.html" class="block hover:underline font-bold text-pink-400">Then vs Now</a>
+    <a href="../contacto.html" class="block hover:underline">Contacto</a>
+  </nav>
+
+</header>
+
+<!-- HERO -->
+<section class="pt-20 pb-24 px-10 text-center">
+<h2 class="text-5xl md:text-6xl font-black text-center uppercase tracking-widest neon-title mb-16">
+  Legado de los 80s
+</h2>
+
+<p class="max-w-3xl mx-auto text-center text-lg leading-relaxed opacity-70">
+  Una mirada final sobre cómo la estética, la tecnología y la música de los años 80 
+  siguen moldeando nuestra cultura visual, sonora y digital actual.
+</p>
+
+</section>
+
+<!-- COMPARATIVAS -->
+<section class="max-w-6xl mx-auto px-10 pb-24 space-y-24">
+
+  <!-- MÚSICA -->
+  <div>
+    <h3 class="text-4xl font-bold mb-10 text-pink-400 uppercase tracking-widest">Música</h3>
+
+    <div class="grid md:grid-cols-2 gap-10">
+
+      <div class="border border-white/10 p-8 rounded-2xl hover:border-pink-400 transition">
+        <h4 class="text-2xl font-bold mb-4">Antes (80s)</h4>
+        <p class="opacity-70 leading-relaxed">
+          Sintetizadores analógicos, vinilos, casetes y el auge de MTV como plataforma visual clave.
+        </p>
+      </div>
+
+      <div class="border border-white/10 p-8 rounded-2xl hover:border-cyan-400 transition">
+        <h4 class="text-2xl font-bold mb-4">Ahora</h4>
+        <p class="opacity-70 leading-relaxed">
+          Streaming, algoritmos, estética limpia y distribución digital inmediata a escala global.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MODA -->
+  <div>
+    <h3 class="text-4xl font-bold mb-10 text-pink-400 uppercase tracking-widest">Moda</h3>
+
+    <div class="grid md:grid-cols-2 gap-10">
+      <div class="border border-white/10 p-8 rounded-2xl hover:border-pink-400 transition">
+        <h4 class="text-2xl font-bold mb-4">Antes (80s)</h4>
+        <p class="opacity-70 leading-relaxed">
+          Hombreras, colores neón, cuero, exageración de siluetas y peinados voluminosos.
+        </p>
+      </div>
+
+      <div class="border border-white/10 p-8 rounded-2xl hover:border-cyan-400 transition">
+        <h4 class="text-2xl font-bold mb-4">Ahora</h4>
+        <p class="opacity-70 leading-relaxed">
+          Streetwear, minimalismo, influencia Y2K y reinterpretaciones contemporáneas del estilo ochentoso.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TECNOLOGÍA -->
+  <div>
+    <h3 class="text-4xl font-bold mb-10 text-pink-400 uppercase tracking-widest">Tecnología</h3>
+
+    <div class="grid md:grid-cols-2 gap-10">
+      <div class="border border-white/10 p-8 rounded-2xl hover:border-pink-400 transition">
+        <h4 class="text-2xl font-bold mb-4">Antes (80s)</h4>
+        <p class="opacity-70 leading-relaxed">
+          Walkman, VHS, computadoras domésticas básicas y videojuegos en cartucho.
+        </p>
+      </div>
+
+      <div class="border border-white/10 p-8 rounded-2xl hover:border-cyan-400 transition">
+        <h4 class="text-2xl font-bold mb-4">Ahora</h4>
+        <p class="opacity-70 leading-relaxed">
+          Smartphones, inteligencia artificial, streaming, consolas online y realidad virtual.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CULTURA VISUAL -->
+  <div>
+    <h3 class="text-4xl font-bold mb-10 text-pink-400 uppercase tracking-widest">Cultura visual</h3>
+
+    <div class="grid md:grid-cols-2 gap-10">
+      <div class="border border-white/10 p-8 rounded-2xl hover:border-pink-400 transition">
+        <h4 class="text-2xl font-bold mb-4">Antes (80s)</h4>
+        <p class="opacity-70 leading-relaxed">
+          Gráfica digital primitiva, VHS, pixel art, tipografías geométricas y estética arcade.
+        </p>
+      </div>
+
+      <div class="border border-white/10 p-8 rounded-2xl hover:border-cyan-400 transition">
+        <h4 class="text-2xl font-bold mb-4">Ahora</h4>
+        <p class="opacity-70 leading-relaxed">
+          Interfaces limpias, motion graphics avanzados, experiencias inmersivas e interacción táctil.
+        </p>
+      </div>
+    </div>
+  </div>
+<div class="mt-32 max-w-4xl mx-auto text-center border-t border-white/20 pt-20">
+
+  <h3 class="text-4xl font-bold mb-8 tracking-widest uppercase text-pink-400">
+    Conclusión
+  </h3>
+
+  <p class="text-lg leading-relaxed opacity-80">
+    Los años 80 no fueron solo una década, sino un laboratorio visual y sonoro que 
+    redefinió la forma en que entendemos la música, el diseño y la tecnología. 
+    Muchas de las herramientas estéticas que hoy consideramos “modernas” 
+    nacieron en ese contexto experimental, donde la analogía convivía con el comienzo de lo digital.
+  </p>
+
+  <p class="text-lg leading-relaxed opacity-80 mt-6">
+    Este proyecto propone mirar ese período no solo desde la nostalgia, 
+    sino como una base activa de la cultura contemporánea.
+  </p>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center p-6 opacity-70 text-sm border-t border-white/20">
+  Proyecto para Informática 1 – Artes Multimediales
+</footer>
+
+</body>
+</html>
