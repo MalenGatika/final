@@ -316,14 +316,14 @@ body.inicio {
   line-height: 2;
   letter-spacing: 0.2em;
   color: rgba(255,255,255,0.9);
-  margin-top: 100px;
+  margin-top: 90px;
 }
 
 
 /* Texto ENTRAR */
 .inicio-entrar {
    position: relative;
-  top: 40px;
+  top: 60px;
   font-size: 4rem;
   font-weight: bold;
   letter-spacing: 12px;
