@@ -3,88 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Juego 8-bit PRO</title>
+  <title>Juego 8-bit</title>
 
   <link rel="stylesheet" href="../../css/style.css">
-
-  <style>
-    body {
-      background: black;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      color: white;
-      font-family: monospace;
-    }
-
-    #ui {
-      position: absolute;
-      top: 15px;
-      width: 100%;
-      text-align: center;
-      pointer-events: none;
-      font-size: 20px;
-    }
-
-    #startScreen, #gameOverScreen {
-      position: absolute;
-      background: rgba(0,0,0,0.7);
-      padding: 40px;
-      border: 2px solid white;
-      border-radius: 12px;
-      text-align: center;
-      display: none;
-    }
-
-    #startScreen.active, #gameOverScreen.active {
-      display: block;
-    }
-
-    button {
-      background: #7b00ff;
-      border: none;
-      color: white;
-      padding: 12px 20px;
-      margin-top: 15px;
-      font-size: 18px;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-  </style>
 </head>
 
-<body>
+<body class="juego-8bits">
 
+  <!-- UI superior -->
   <div id="ui">
     <span id="score">Puntaje: 0</span> — 
     <span id="lives">Vidas: 3</span>
   </div>
 
+  <!-- Lienzo del juego -->
   <canvas id="gameCanvas" width="480" height="600"></canvas>
 
   <!-- START SCREEN -->
   <div id="startScreen" class="active">
-      <h2>🚀 SPACE MINI — 8-bit Edition</h2>
-      <p>Usá ← → para moverte y ESPACIO para disparar</p>
-      <button id="startBtn">JUGAR</button>
+    <h2>🚀 SPACE MINI — 8-bit Edition</h2>
+    <p>Usá ← → para moverte y ESPACIO para disparar</p>
+    <button id="startBtn" class="juego-btn">JUGAR</button>
   </div>
-  
-<div id="winScreen" class="overlay">
-  <div class="box">
-    <h2>🎉 ¡Ganaste! 🎉</h2>
-    <p id="winScore"></p>
-    <button id="winRestart">Jugar de nuevo</button>
+
+  <!-- WIN SCREEN -->
+  <div id="winScreen">
+    <div class="box">
+      <h2>🎉 ¡Ganaste! 🎉</h2>
+      <p id="winScore"></p>
+      <button id="winRestart" class="juego-btn">Jugar de nuevo</button>
+    </div>
   </div>
-</div>
 
   <!-- GAME OVER -->
   <div id="gameOverScreen">
-      <h2>💀 GAME OVER</h2>
-      <p id="finalScore"></p>
-      <button id="restartBtn">REINTENTAR</button>
+    <h2>💀 GAME OVER</h2>
+    <p id="finalScore"></p>
+    <button id="restartBtn" class="juego-btn">REINTENTAR</button>
   </div>
+<div id="mobileControls">
+  <button id="btnLeft">⬅</button>
+  <button id="btnShoot">💥</button>
+  <button id="btnRight">➡</button>
+</div>
 
   <script src="../js/game.js"></script>
 </body>

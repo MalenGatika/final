@@ -8,7 +8,7 @@ const tracks = {
     artist: "Kate Bush",
     versions: [
       { name: "Original (Kate Bush)", file: "./audios/kate.mp3" },
-      { name: "Meg", file: "./audios/cover1.mp3" },
+      { name: "Meg Myers", file: "./audios/cover1.mp3" },
       { name: "Placebo", file: "./audios/cover2.mp3" },
       { name: "Chromatics", file: "./audios/cover3.mp3" }
     ]

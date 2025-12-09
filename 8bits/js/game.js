@@ -350,3 +350,45 @@ document.getElementById("restartBtn").onclick = () => {
   gameRunning = true;
   update();
 };
+document.getElementById("winRestart").onclick = () => {
+  document.getElementById("winScreen").classList.remove("active");
+
+  score = 0;
+  lives = 3;
+  level = 1;
+
+  scoreUI.textContent = "Puntaje: 0";
+  livesUI.textContent = "Vidas: 3";
+
+  enemySpeed = 0.8;
+  enemyDirection = 1;
+  bullets = [];
+  explosions = [];
+
+  createEnemies(4, 6, 60, 40, 40);
+
+  gameRunning = true;
+  update();
+};
+
+document.getElementById("btnLeft").addEventListener("touchstart", () => {
+  if (!gameRunning) return;
+  player.dx = -player.speed;
+});
+
+document.getElementById("btnRight").addEventListener("touchstart", () => {
+  if (!gameRunning) return;
+  player.dx = player.speed;
+});
+
+document.getElementById("btnShoot").addEventListener("touchstart", () => {
+  if (!gameRunning) return;
+  shoot();
+});
+
+document.getElementById("btnLeft").addEventListener("touchend", () => {
+  player.dx = 0;
+});
+document.getElementById("btnRight").addEventListener("touchend", () => {
+  player.dx = 0;
+});

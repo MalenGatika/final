@@ -305,6 +305,86 @@ body.inicio {
   align-items: center !important;
 }
 
+/* ================================
+   JUEGO 8-BITS — ESTILOS
+================================ */
+
+body.juego-8bits {
+  background: black;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: monospace;
+}
+
+/* UI superior */
+#ui {
+  position: absolute;
+  top: 15px;
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+  font-size: 20px;
+  z-index: 20;
+}
+
+/* Pantallas superpuestas */
+#startScreen,
+#gameOverScreen,
+#winScreen {
+  position: absolute;
+  background: rgba(0,0,0,0.7);
+  padding: 40px;
+  border: 2px solid white;
+  border-radius: 12px;
+  text-align: center;
+  display: none;
+  z-index: 10;
+}
+
+#startScreen.active,
+#gameOverScreen.active,
+#winScreen.active {
+  display: block;
+}
+
+/* Botones del juego */
+.juego-btn {
+  background: #7b00ff;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  margin-top: 15px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: monospace;
+}
+
+.juego-btn:hover {
+  background: #9a2cff;
+}
+#mobileControls {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  z-index: 999;
+}
+
+#mobileControls button {
+  font-size: 22px;
+  padding: 14px 20px;
+  border-radius: 10px;
+  background: #6a00ff;
+  color: white;
+}
+
 /* ----------------------------------------
    FORMULARIO – cartel neón
 ---------------------------------------- */
