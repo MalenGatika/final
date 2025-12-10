@@ -175,10 +175,7 @@ footer {
    PANTALLA DE INICIO
 ============================= */
 
-/* Anular fondo negro global */
-body.inicio {
-  background: none !important;
-}
+
 
 /* Imagen fullscreen */
 body.inicio {
@@ -385,6 +382,13 @@ body.juego-8bits {
   color: white;
 }
 
+.title-strip {
+  background-image: url("../michael/img/mj-strip.jpg"); 
+  background-size: cover;
+  background-position: center;
+  padding: 3rem 2rem;
+  border-radius: 1.5rem;
+}
 /* ----------------------------------------
    FORMULARIO – cartel neón
 ---------------------------------------- */
