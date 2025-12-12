@@ -52,6 +52,7 @@ footer {
 }
 
 .neon-box::before {
+  pointer-events: none;
   content: "";
   position: absolute;
   top: -2px;

@@ -1,7 +1,5 @@
-// MAIN.JS — Funciones generales del sitio
-
 // -----------------------------------------------------
-// Mobile Navigation Toggle
+// Mobile Navigation Toggle (simple y robusto)
 // -----------------------------------------------------
 const navToggle = document.getElementById("navToggle");
 const navMenu = document.getElementById("navMenu");
@@ -29,7 +27,7 @@ smoothLinks.forEach((link) => {
 });
 
 // -----------------------------------------------------
-// Efecto fade-in al hacer scroll
+// Fade-in al hacer scroll
 // -----------------------------------------------------
 const fadeElements = document.querySelectorAll(".fade-in");
 
@@ -55,28 +53,32 @@ fadeElements.forEach((el) => {
 });
 
 // -----------------------------------------------------
-// Menú desplegable "Artistas" (desktop + mobile)
+// Menú "Artistas" desktop
 // -----------------------------------------------------
+const artistasBtn = document.getElementById("artistasBtn");
+const artistasMenu = document.getElementById("artistasMenu");
 
-// Desktop
-// Desktop
 if (artistasBtn && artistasMenu) {
   artistasBtn.addEventListener("mouseenter", () => {
-    artistasMenu.classList.remove("hidden", "pointer-events-none");
+    artistasMenu.classList.remove("hidden");
   });
+
   artistasBtn.addEventListener("mouseleave", () => {
-    artistasMenu.classList.add("hidden", "pointer-events-none");
+    artistasMenu.classList.add("hidden");
   });
+
   artistasMenu.addEventListener("mouseenter", () => {
-    artistasMenu.classList.remove("hidden", "pointer-events-none");
+    artistasMenu.classList.remove("hidden");
   });
+
   artistasMenu.addEventListener("mouseleave", () => {
-    artistasMenu.classList.add("hidden", "pointer-events-none");
+    artistasMenu.classList.add("hidden");
   });
 }
 
-
-// Mobile
+// -----------------------------------------------------
+// Artistas mobile
+// -----------------------------------------------------
 const artistasMobileBtn = document.getElementById("artistasMobileBtn");
 const artistasMobileMenu = document.getElementById("artistasMobileMenu");
 
