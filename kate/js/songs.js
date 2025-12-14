@@ -1,53 +1,17 @@
 // --------------------------------------------------
-// BASE DE DATOS DE CANCIONES
+// DATOS DE KATE BUSH
 // --------------------------------------------------
 
-const tracks = {
-  1: {
-    title: "Running Up That Hill",
-    artist: "Kate Bush",
-    versions: [
-      { name: "Original (Kate Bush)", file: "./audios/kate.mp3" },
-      { name: "Meg Myers", file: "./audios/cover1.mp3" },
-      { name: "Placebo", file: "./audios/cover2.mp3" },
-      { name: "Chromatics", file: "./audios/cover3.mp3" }
-    ]
-  },
-
-  2: {
-    title: "Girls Just Want to Have Fun",
-    artist: "Cyndi Lauper",
-    versions: [
-      { name: "Original", file: "./audios/original.mp3" },
-      { name: "Cover 1", file: "./audios/cover1.mp3" },
-      { name: "Cover 2", file: "./audios/cover2.mp3" },
-      { name: "Cover 3", file: "./audios/cover3.mp3" }
-    ]
-  },
-
-  3: {
-    title: "Billie Jean",
-    artist: "Michael Jackson",
-    versions: [
-      { name: "Original", file: "./audios/original.mp3" },
-      { name: "Cover 1", file: "./audios/cover1.mp3" },
-      { name: "Cover 2", file: "./audios/cover2.mp3" },
-      { name: "Cover 3", file: "./audios/cover3.mp3" }
-    ]
-  },
-
-  4: {
-    title: "Sweet Dreams (Are Made of This)",
-    artist: "Eurythmics",
-    versions: [
-      { name: "Original", file: "./audios/original.mp3" },
-      { name: "Cover 1", file: "./audios/cover1.mp3" },
-      { name: "Cover 2", file: "./audios/cover2.mp3" },
-      { name: "Cover 3", file: "./audios/cover3.mp3" }
-    ]
-  }
+const songData = {
+  title: "Running Up That Hill",
+  artist: "Kate Bush",
+  versions: [
+    { name: "Original (Kate Bush)", file: "./audios/kate.mp3" },
+    { name: "Meg Myers", file: "./audios/cover1.mp3" },
+    { name: "Placebo", file: "./audios/cover2.mp3" },
+    { name: "Chromatics", file: "./audios/cover3.mp3" }
+  ]
 };
-
 
 // --------------------------------------------------
 // AL CARGAR LA PÁGINA
@@ -55,20 +19,15 @@ const tracks = {
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  // 1) Leer ?track=#
-  const params = new URLSearchParams(window.location.search);
-  const trackNumber = params.get("track") || 1;
-  const songData = tracks[trackNumber];
-
-  // 2) Insertar título y artista
+  // Título y artista
   document.getElementById("songTitle").textContent = songData.title;
   document.getElementById("songArtist").textContent = songData.artist;
 
-  // 3) Asignar versiones
+  // Reproductor principal
   const mainPlayer = document.getElementById("mainPlayer");
   mainPlayer.src = songData.versions[0].file;
 
-  // 4) Activar botones
+  // Botones de versiones
   document.querySelectorAll(".versionBtn").forEach((btn, i) => {
     btn.textContent = songData.versions[i].name;
     btn.addEventListener("click", () => {
@@ -78,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 5) Activar visualizador al hacer play
+  // Visualizador
   mainPlayer.addEventListener("play", () => {
     setupVisualizer(mainPlayer);
     if (audioContext && audioContext.state === "suspended") {
@@ -86,10 +45,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // 6) Mini juego
+  // Mini juego
   setupGame(songData.versions);
 
-  // 7) Efecto neón
+  // Efecto neón
   neonifyButtons();
 });
 
@@ -103,12 +62,11 @@ function setupGame(versions) {
   const gameOptions = document.getElementById("gameOptions");
   const gameResult = document.getElementById("gameResult");
 
-  // Elegir versión secreta
   const correctIndex = Math.floor(Math.random() * versions.length);
   gamePlayer.src = versions[correctIndex].file;
 
-  // Crear opciones
   gameOptions.innerHTML = "";
+
   versions.forEach((v, i) => {
     const btn = document.createElement("button");
     btn.textContent = v.name;
@@ -152,7 +110,6 @@ function setupVisualizer(audioElement) {
 
 function visualize() {
   requestAnimationFrame(visualize);
-
   if (!analyser) return;
 
   analyser.getByteFrequencyData(dataArray);
@@ -160,30 +117,25 @@ function visualize() {
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
 
-  ctx.globalCompositeOperation = "lighter";
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.globalCompositeOperation = "lighter";
 
   const barWidth = (canvas.width / dataArray.length) * 1.6;
   let x = 0;
 
-  for (let i = 0; i < dataArray.length; i++) {
-    const barHeight = dataArray[i] * 0.7;
+  dataArray.forEach((value, i) => {
+    const barHeight = value * 0.7;
     const hue = i * 3;
 
     ctx.fillStyle = `hsl(${hue}, 80%, 60%)`;
     ctx.shadowColor = `hsl(${hue}, 100%, 70%)`;
     ctx.shadowBlur = 20;
 
-    ctx.fillRect(
-      x,
-      canvas.height - barHeight,
-      barWidth,
-      barHeight
-    );
-
+    ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
     ctx.shadowBlur = 0;
+
     x += barWidth + 1;
-  }
+  });
 
   ctx.globalCompositeOperation = "source-over";
 }
@@ -194,9 +146,7 @@ function visualize() {
 // --------------------------------------------------
 
 function neonifyButtons() {
-  const neonButtons = document.querySelectorAll(".btn-primary");
-
-  neonButtons.forEach(btn => {
+  document.querySelectorAll(".btn-primary").forEach(btn => {
     btn.style.boxShadow = "0 0 12px rgba(255, 0, 150, 0.7)";
     btn.style.transition = "0.25s";
 
