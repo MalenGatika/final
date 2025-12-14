@@ -1,5 +1,5 @@
 // -----------------------------------------------------
-// Mobile Navigation Toggle (simple y robusto)
+// Mobile Navigation Toggle 
 // -----------------------------------------------------
 const navToggle = document.getElementById("navToggle");
 const navMenu = document.getElementById("navMenu");

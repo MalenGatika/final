@@ -1,6 +1,6 @@
-// -------------------------------------
-// SPACE MINI — Versión PRO con DOS NIVELES
-// -------------------------------------
+// --------------
+// SPACE MINI — 
+// --------------
 
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
@@ -231,7 +231,7 @@ function endGame() {
 }
 
 // -------------------------
-// WIN CHECK
+//  VICTORIA
 // -------------------------
 function checkWin() {
   const allDead = enemies.every(e => !e.alive);
